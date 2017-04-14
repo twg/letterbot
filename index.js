@@ -6,9 +6,9 @@ var request = require('request');
 var format = ".json";
 //var apikey = process.env.WU_ACCESS  //WU API key; will be set in Heroku
 
-//var bodyParser = require('body-parser');
-//app.use(bodyParser.json());
-//app.use(bodyParser.urlencoded({ extended: true }));
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //use port is set in the environment variable, or 9001 if it isn’t set.
 app.set('port', (process.env.PORT || 9001));
@@ -19,7 +19,7 @@ app.get('/', function(req, res){
 });
 
 //app.post is triggered when a POST request is sent to the URL ‘/post’
-app.post('slack/post', function(req, res){
+app.post('/slack/post', function(req, res){
 //   //take a message from Slack slash command
   var query = req.body.text;
       var body = {

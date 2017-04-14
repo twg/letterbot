@@ -4,8 +4,9 @@
   "description": "Slackbot / Scraper for Letterboxd ratings",
   "main": "index.js",
   "dependencies": {
-   "express": "4.15.2",
-   "request": "^2.81.0"
+    "body-parser": "^1.17.1",
+    "express": "4.15.2",
+    "request": "^2.81.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
