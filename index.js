@@ -15,6 +15,11 @@ app.get('/', function(req, res){
 app.post('/slack/post', function(req, res){
 //   //take a message from Slack slash command
   var query = req.body.text;
+  if (query == ''){
+  	res.send("Letterbot needs you to ask about a movie!"); 
+  }
+  else {
+
       var body = {
         response_type: "in_channel",
         "attachments": [
@@ -27,7 +32,7 @@ app.post('/slack/post', function(req, res){
         ]
       };
       res.send(body);  
-
+    }
 });
 
 //tells Node which port to listen on
