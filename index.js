@@ -19,9 +19,23 @@ app.get('/', function(req, res){
 });
 
 //app.post is triggered when a POST request is sent to the URL ‘/post’
-// app.post('/post', function(req, res){
+app.post('slack/post', function(req, res){
 //   //take a message from Slack slash command
-//   var query = req.body.text
+  var query = req.body.text;
+      var body = {
+        response_type: "in_channel",
+        "attachments": [
+          {
+            "text": "Location: " + location + "\n"
+                  + "Temperature: " + temperature + "\n"
+                  + "Condition: " + weatherCondition,
+            "image_url": icon_url,
+          }
+        ]
+      };
+      res.send(body);  
+
+});
 
 //   // var parsed_url = url.format({
 //   //   pathname: 'http://api.wunderground.com/api/' + apikey + '/conditions/q/' + req.body.text + format,
