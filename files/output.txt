@@ -1,0 +1,1898 @@
+scraped json is: {
+  "meta": {
+    "viewport": "width=1024",
+    "description": "A scientist in a surrealist society kidnaps children to steal their dreams, hoping that they slow his aging process.",
+    "twitter:card": "summary_large_image",
+    "twitter:site": "@letterboxd",
+    "twitter:url": "https://letterboxd.com/film/the-city-of-lost-children/",
+    "twitter:title": "The City of Lost Children (1995)",
+    "twitter:description": "A scientist in a surrealist society kidnaps children to steal their dreams, hoping that they slow his aging process.",
+    "twitter:label1": "Directed by",
+    "twitter:data1": "Jean-Pierre Jeunet, Marc Caro",
+    "twitter:label2": "Average rating",
+    "twitter:data2": "3.74 out of 5",
+    "twitter:image": "https://a.ltrbxd.com/resized/sm/upload/wm/t3/m0/ke/city-of-lost-children-2-1200-1200-675-675-crop-000000.jpg?k=e7bbb99dd9",
+    "application-name": "Letterboxd",
+    "theme-color": "#445566",
+    "msapplication-TileColor": "#445566",
+    "apple-itunes-app": "app-id=1054271011, affiliate-data=11l5KW, app-argument=https://letterboxd.com/film/the-city-of-lost-children/",
+    "mobile-web-app-capable": "yes"
+  },
+  "microdata": [
+    {
+      "id": 1,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Briac Barthélémy"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "0",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 2,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Nane Germon"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "1",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 3,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Pierre-Quentin Faesch"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "2",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 4,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Alexis Pivot"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "3",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 5,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "François Hadji-Lazaro"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "4",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 6,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Dominique Bettenfeld"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "5",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 7,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Ron Perlman"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "6",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 8,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Lotfi Yahya Jedidi"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "7",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 9,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Judith Vittet"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "8",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 10,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Thierry Gibault"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "9",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 11,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Jean-Claude Dreyfus"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "10",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 12,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Marc Caro"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "11",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 13,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Odile Mallet"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "12",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 14,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Ham-Chau Luong"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "13",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 15,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Serge Merlin"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "14",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 16,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Frankie Pain"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "15",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 17,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Ticky Holgado"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "16",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 18,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Enrique Villanueva"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "17",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 19,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Jean-Louis Trintignant"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "18",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 20,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Dominique Chevalier"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "19",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 21,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Mapi Galán"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "20",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 22,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Lorella Cravotta"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "21",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 23,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Éric Houzelot"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "22",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 24,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Dominique Pinon"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "23",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 25,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Philippe Beautier"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "24",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 26,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Geneviève Brunet"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "25",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 27,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Marc Amyot"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "26",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 28,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Rufus"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "27",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 29,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Jean-Philippe Labadie"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "28",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 30,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Joseph Lucien"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "29",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 31,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Michel Motu"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "30",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 32,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Rachel Boulenger"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "31",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 33,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Elisabeth Etienne"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "32",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 34,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Raphaèle Bouchard"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "33",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 35,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Daniel Emilfork"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "34",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 36,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Cris Huerta"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "35",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 37,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Mireille Mossé"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "actor",
+        "36",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 38,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Marc Caro"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "director",
+        "0",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 39,
+      "type": "http://schema.org/Person",
+      "props": {
+        "name": "Jean-Pierre Jeunet"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "director",
+        "1",
+        "type"
+      ],
+      "length": 1,
+      "level": 6
+    },
+    {
+      "id": 40,
+      "type": "http://schema.org/AggregateRating",
+      "props": {
+        "reviewCount": "213",
+        "ratingCount": "3689",
+        "bestRating": "10",
+        "worstRating": "1",
+        "ratingValue": "7.47"
+      },
+      "path": [
+        "items",
+        "0",
+        "properties",
+        "aggregateRating",
+        "0",
+        "type"
+      ],
+      "length": 5,
+      "level": 6
+    },
+    {
+      "id": 41,
+      "type": "http://schema.org/Movie",
+      "props": {
+        "undefined": "__ref__40",
+        "name": "The City of Lost Children",
+        "datePublished": "1995",
+        "image": "https://a.ltrbxd.com/resized/sm/upload/mg/mi/lj/8v/dr7PpAlJe1cige23o6HrnxIYMcw-0-230-0-345-crop.jpg?k=964986bbcc"
+      },
+      "path": [
+        "items",
+        "0",
+        "type"
+      ],
+      "length": 6,
+      "level": 3
+    },
+    {
+      "id": 42,
+      "type": "http://schema.org/Rating",
+      "props": {
+        "bestRating": "10",
+        "worstRating": "1",
+        "ratingValue": "8"
+      },
+      "path": [
+        "items",
+        "1",
+        "type"
+      ],
+      "length": 3,
+      "level": 3
+    },
+    {
+      "id": 43,
+      "type": "http://schema.org/Rating",
+      "props": {
+        "bestRating": "10",
+        "worstRating": "1",
+        "ratingValue": "8"
+      },
+      "path": [
+        "items",
+        "2",
+        "type"
+      ],
+      "length": 3,
+      "level": 3
+    },
+    {
+      "id": 44,
+      "type": "http://schema.org/Rating",
+      "props": {
+        "bestRating": "10",
+        "worstRating": "1",
+        "ratingValue": "8"
+      },
+      "path": [
+        "items",
+        "3",
+        "type"
+      ],
+      "length": 3,
+      "level": 3
+    },
+    {
+      "id": 45,
+      "type": "http://schema.org/Rating",
+      "props": {
+        "bestRating": "10",
+        "worstRating": "1",
+        "ratingValue": "8"
+      },
+      "path": [
+        "items",
+        "4",
+        "type"
+      ],
+      "length": 3,
+      "level": 3
+    },
+    {
+      "id": 46,
+      "type": "http://schema.org/Rating",
+      "props": {
+        "bestRating": "10",
+        "worstRating": "1",
+        "ratingValue": "10"
+      },
+      "path": [
+        "items",
+        "5",
+        "type"
+      ],
+      "length": 3,
+      "level": 3
+    },
+    {
+      "id": 47,
+      "type": "http://schema.org/Rating",
+      "props": {
+        "bestRating": "10",
+        "worstRating": "1",
+        "ratingValue": "10"
+      },
+      "path": [
+        "items",
+        "6",
+        "type"
+      ],
+      "length": 3,
+      "level": 3
+    },
+    {
+      "id": 48,
+      "type": "http://schema.org/Rating",
+      "props": {
+        "bestRating": "10",
+        "worstRating": "1",
+        "ratingValue": "5"
+      },
+      "path": [
+        "items",
+        "7",
+        "type"
+      ],
+      "length": 3,
+      "level": 3
+    },
+    {
+      "id": 49,
+      "type": "http://schema.org/Rating",
+      "props": {
+        "bestRating": "10",
+        "worstRating": "1",
+        "ratingValue": "10"
+      },
+      "path": [
+        "items",
+        "8",
+        "type"
+      ],
+      "length": 3,
+      "level": 3
+    },
+    {
+      "id": 50,
+      "type": "http://schema.org/Rating",
+      "props": {
+        "bestRating": "10",
+        "worstRating": "1",
+        "ratingValue": "6"
+      },
+      "path": [
+        "items",
+        "9",
+        "type"
+      ],
+      "length": 3,
+      "level": 3
+    },
+    {
+      "id": 51,
+      "type": "http://schema.org/Rating",
+      "props": {
+        "bestRating": "10",
+        "worstRating": "1",
+        "ratingValue": "5"
+      },
+      "path": [
+        "items",
+        "10",
+        "type"
+      ],
+      "length": 3,
+      "level": 3
+    },
+    {
+      "id": 52,
+      "type": "http://schema.org/Rating",
+      "props": {
+        "bestRating": "10",
+        "worstRating": "1",
+        "ratingValue": "8"
+      },
+      "path": [
+        "items",
+        "11",
+        "type"
+      ],
+      "length": 3,
+      "level": 3
+    },
+    {
+      "id": 53,
+      "type": "http://schema.org/Rating",
+      "props": {
+        "bestRating": "10",
+        "worstRating": "1",
+        "ratingValue": "10"
+      },
+      "path": [
+        "items",
+        "12",
+        "type"
+      ],
+      "length": 3,
+      "level": 3
+    },
+    {
+      "id": 54,
+      "type": "http://schema.org/Rating",
+      "props": {
+        "bestRating": "10",
+        "worstRating": "1",
+        "ratingValue": "8"
+      },
+      "path": [
+        "items",
+        "13",
+        "type"
+      ],
+      "length": 3,
+      "level": 3
+    },
+    {
+      "id": 55,
+      "type": "http://schema.org/Rating",
+      "props": {
+        "bestRating": "10",
+        "worstRating": "1",
+        "ratingValue": "8"
+      },
+      "path": [
+        "items",
+        "14",
+        "type"
+      ],
+      "length": 3,
+      "level": 3
+    },
+    {
+      "id": 56,
+      "type": "http://schema.org/Rating",
+      "props": {
+        "bestRating": "10",
+        "worstRating": "1",
+        "ratingValue": "10"
+      },
+      "path": [
+        "items",
+        "15",
+        "type"
+      ],
+      "length": 3,
+      "level": 3
+    }
+  ],
+  "microformat": [],
+  "tags": {
+    "title": "‎The City of Lost Children (1995) directed by Jean-Pierre Jeunet, Marc Caro • Reviews, film + cast • Letterboxd",
+    "headers": {
+      "h1": [
+        "Letterboxd — Your life in film",
+        "The City of Lost Children"
+      ],
+      "h2": [
+        "Ratings",
+        "Popular reviews",
+        "Recent reviews",
+        "Popular Lists",
+        " Random Movie Roulette ",
+        " Weird List of Weird Movies ",
+        " They aren't films; they're experiences "
+      ],
+      "h3": [
+        "Synopsis",
+        "Cast",
+        "Directors",
+        "Producers",
+        "Writers",
+        "Editor",
+        "Cinematography",
+        "Production Design",
+        "Composer",
+        "Costumes",
+        "Studios",
+        "Countries",
+        "Languages",
+        "Genres"
+      ],
+      "h4": [
+        "Where happily ever after is just a dream."
+      ],
+      "h5": [],
+      "h6": []
+    },
+    "images": [
+      "https://a.ltrbxd.com/resized/sm/upload/mg/mi/lj/8v/dr7PpAlJe1cige23o6HrnxIYMcw-0-230-0-345-crop.jpg?k=964986bbcc",
+      "https://a.ltrbxd.com/resized/avatar/twitter/1/2/2/0/7/shard/http___pbs.twimg.com_profile_images_836935390036537344_CieYJHLL-0-80-0-80-crop.jpg?k=4d85e0def7",
+      "https://a.ltrbxd.com/resized/avatar/twitter/4/6/6/3/shard/http___pbs.twimg.com_profile_images_808410464061444097_Ukrw15TH-0-80-0-80-crop.jpg?k=08e83c6c03",
+      "https://a.ltrbxd.com/resized/avatar/twitter/2/8/0/6/2/shard/http___pbs.twimg.com_profile_images_668427649165971458__wVfY2Lf-0-80-0-80-crop.jpg?k=8886470c2a",
+      "https://secure.gravatar.com/avatar/d26c90b6165f675577bafc8821ce0a96?rating=PG&size=80&border=&default=https%3A%2F%2Fletterboxd.com%2Fstatic%2Fimg%2Favatar80.5eaefcc6.png",
+      "https://secure.gravatar.com/avatar/fd1b997f0a2049011fc959dca9dcd84f?rating=PG&size=80&border=&default=https%3A%2F%2Fletterboxd.com%2Fstatic%2Fimg%2Favatar80.5eaefcc6.png",
+      "https://a.ltrbxd.com/resized/avatar/twitter/2/3/2/7/7/4/shard/http___pbs.twimg.com_profile_images_796425855165677568_eBj5HYkb-0-80-0-80-crop.jpg?k=fd265de4bd",
+      "https://a.ltrbxd.com/resized/avatar/twitter/1/0/9/8/4/2/shard/http___pbs.twimg.com_profile_images_617711716990717952_kUVVUwUb-0-80-0-80-crop.jpg?k=db48300915",
+      "https://a.ltrbxd.com/resized/avatar/twitter/2/3/0/6/8/shard/http___pbs.twimg.com_profile_images_821833426902728708_VC2B0FM9-0-80-0-80-crop.jpg?k=da3f677eb4",
+      "https://a.ltrbxd.com/resized/avatar/twitter/1/1/8/9/5/5/shard/http___pbs.twimg.com_profile_images_458693351991029760_TgZjfoPH-0-80-0-80-crop.jpg?k=52f6f08a9a",
+      "https://secure.gravatar.com/avatar/79a76846a2dafd7a29a8fb48c5080b4e?rating=PG&size=80&border=&default=https%3A%2F%2Fletterboxd.com%2Fstatic%2Fimg%2Favatar80.5eaefcc6.png",
+      "https://secure.gravatar.com/avatar/95585dcff02a7354d32de091c3dded64?rating=PG&size=80&border=&default=https%3A%2F%2Fletterboxd.com%2Fstatic%2Fimg%2Favatar80.5eaefcc6.png",
+      "https://a.ltrbxd.com/resized/avatar/twitter/2/2/2/2/0/shard/http___pbs.twimg.com_profile_images_815624324816269312_uM0WUK_P-0-80-0-80-crop.jpg?k=1483e81244",
+      "https://a.ltrbxd.com/resized/avatar/twitter/2/3/1/8/5/5/shard/http___pbs.twimg.com_profile_images_756368116809097216_G4_rPEu0-0-80-0-80-crop.jpg?k=40039d9d92",
+      "https://secure.gravatar.com/avatar/e211bbb51d2f207831808767a50dc93d?rating=PG&size=80&border=&default=https%3A%2F%2Fletterboxd.com%2Fstatic%2Fimg%2Favatar80.5eaefcc6.png",
+      "https://a.ltrbxd.com/resized/avatar/twitter/2/9/7/7/4/4/shard/http___pbs.twimg.com_profile_images_809985296599158784__T_Fe8AI-0-80-0-80-crop.jpg?k=f93d919b24",
+      "https://s3.ltrbxd.com/static/img/empty-poster-70.8461d4ea.png",
+      "https://s3.ltrbxd.com/static/img/empty-poster-70.8461d4ea.png",
+      "https://s3.ltrbxd.com/static/img/empty-poster-70.8461d4ea.png",
+      "https://s3.ltrbxd.com/static/img/empty-poster-70.8461d4ea.png",
+      "https://s3.ltrbxd.com/static/img/empty-poster-70.8461d4ea.png",
+      "https://secure.gravatar.com/avatar/9b018becf274cee13adf15b0ece0900d?rating=PG&size=32&border=&default=https%3A%2F%2Fletterboxd.com%2Fstatic%2Fimg%2Favatar32.54089557.png",
+      "https://s3.ltrbxd.com/static/img/empty-poster-70.8461d4ea.png",
+      "https://s3.ltrbxd.com/static/img/empty-poster-70.8461d4ea.png",
+      "https://s3.ltrbxd.com/static/img/empty-poster-70.8461d4ea.png",
+      "https://s3.ltrbxd.com/static/img/empty-poster-70.8461d4ea.png",
+      "https://s3.ltrbxd.com/static/img/empty-poster-70.8461d4ea.png",
+      "https://a.ltrbxd.com/resized/avatar/twitter/2/3/5/0/2/1/shard/http___pbs.twimg.com_profile_images_575077842477801472_2FL9FlaN-0-32-0-32-crop.jpg?k=bcb950e83e",
+      "https://s3.ltrbxd.com/static/img/empty-poster-70.8461d4ea.png",
+      "https://s3.ltrbxd.com/static/img/empty-poster-70.8461d4ea.png",
+      "https://s3.ltrbxd.com/static/img/empty-poster-70.8461d4ea.png",
+      "https://s3.ltrbxd.com/static/img/empty-poster-70.8461d4ea.png",
+      "https://s3.ltrbxd.com/static/img/empty-poster-70.8461d4ea.png",
+      "https://a.ltrbxd.com/resized/avatar/twitter/2/5/4/8/5/shard/http___pbs.twimg.com_profile_images_850321510023790593_Xy5_vOt1-0-32-0-32-crop.jpg?k=1eee90910d"
+    ],
+    "links": [
+      {
+        "text": "Letterboxd — Your life in film",
+        "href": "/"
+      },
+      {
+        "text": "Reset password",
+        "href": "/user/request-password-reset"
+      },
+      {
+        "text": "7.4k",
+        "href": "/film/the-city-of-lost-children/members/"
+      },
+      {
+        "text": "1.8k",
+        "href": "/film/the-city-of-lost-children/lists/"
+      },
+      {
+        "text": "1.7k",
+        "href": "/film/the-city-of-lost-children/likes/"
+      },
+      {
+        "text": "1995",
+        "href": "/films/year/1995/"
+      },
+      {
+        "text": "Jean-Pierre Jeunet",
+        "href": "/director/jean-pierre-jeunet/"
+      },
+      {
+        "text": "Marc Caro",
+        "href": "/director/marc-caro/"
+      },
+      {
+        "text": "Cast",
+        "href": "/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "Crew",
+        "href": "/film/the-city-of-lost-children/crew/"
+      },
+      {
+        "text": "Details",
+        "href": "/film/the-city-of-lost-children/details/"
+      },
+      {
+        "text": "Genres",
+        "href": "/film/the-city-of-lost-children/genres/"
+      },
+      {
+        "text": "Ron Perlman",
+        "title": "One",
+        "href": "/actor/ron-perlman/"
+      },
+      {
+        "text": "Dominique Pinon",
+        "title": "Scaphandrier / Les Clones",
+        "href": "/actor/dominique-pinon/"
+      },
+      {
+        "text": "Judith Vittet",
+        "title": "Miette",
+        "href": "/actor/judith-vittet/"
+      },
+      {
+        "text": "Daniel Emilfork",
+        "title": "Krank",
+        "href": "/actor/daniel-emilfork/"
+      },
+      {
+        "text": "Jean-Claude Dreyfus",
+        "title": "Marcello",
+        "href": "/actor/jean-claude-dreyfus/"
+      },
+      {
+        "text": "Geneviève Brunet",
+        "title": "la Pieuvre",
+        "href": "/actor/genevieve-brunet/"
+      },
+      {
+        "text": "Odile Mallet",
+        "title": "la Pieuvre",
+        "href": "/actor/odile-mallet/"
+      },
+      {
+        "text": "Mireille Mossé",
+        "title": "Mademoiselle Bismuth",
+        "href": "/actor/mireille-mosse/"
+      },
+      {
+        "text": "Serge Merlin",
+        "title": "Gabriel Marie",
+        "href": "/actor/serge-merlin/"
+      },
+      {
+        "text": "Rufus",
+        "title": "Peeler",
+        "href": "/actor/rufus/"
+      },
+      {
+        "text": "Ticky Holgado",
+        "title": "Ex-acrobat",
+        "href": "/actor/ticky-holgado/"
+      },
+      {
+        "text": "Cris Huerta",
+        "title": "Father",
+        "href": "/actor/cris-huerta/"
+      },
+      {
+        "text": "Jean-Louis Trintignant",
+        "title": "L'oncle Irvin (voice)",
+        "href": "/actor/jean-louis-trintignant/"
+      },
+      {
+        "text": "Joseph Lucien",
+        "title": "Denree",
+        "href": "/actor/joseph-lucien/"
+      },
+      {
+        "text": "Mapi Galán",
+        "title": "Lune",
+        "href": "/actor/mapi-galan/"
+      },
+      {
+        "text": "Briac Barthélémy",
+        "title": "Bottle",
+        "href": "/actor/briac-barthelemy/"
+      },
+      {
+        "text": "Pierre-Quentin Faesch",
+        "title": "Pipo",
+        "href": "/actor/pierre-quentin-faesch/"
+      },
+      {
+        "text": "Alexis Pivot",
+        "title": "Tadpole",
+        "href": "/actor/alexis-pivot/"
+      },
+      {
+        "text": "François Hadji-Lazaro",
+        "title": "Killer",
+        "href": "/actor/francois-hadji-lazaro/"
+      },
+      {
+        "text": "Dominique Bettenfeld",
+        "title": "Bogdan",
+        "href": "/actor/dominique-bettenfeld/"
+      },
+      {
+        "text": "Lotfi Yahya Jedidi",
+        "title": "Melchior",
+        "href": "/actor/lotfi-yahya-jedidi/"
+      },
+      {
+        "text": "Thierry Gibault",
+        "title": "Brutus",
+        "href": "/actor/thierry-gibault/"
+      },
+      {
+        "text": "Marc Caro",
+        "title": "Brother Ange-Joseph",
+        "href": "/actor/marc-caro/"
+      },
+      {
+        "text": "Ham-Chau Luong",
+        "title": "Tattoo Artist",
+        "href": "/actor/ham-chau-luong/"
+      },
+      {
+        "text": "Frankie Pain",
+        "title": "Barmaid",
+        "href": "/actor/frankie-pain/"
+      },
+      {
+        "text": "Enrique Villanueva",
+        "title": "Spainard",
+        "href": "/actor/enrique-villanueva/"
+      },
+      {
+        "text": "Dominique Chevalier",
+        "title": "Tied-up Guard",
+        "href": "/actor/dominique-chevalier/"
+      },
+      {
+        "text": "Lorella Cravotta",
+        "title": "Woman at her",
+        "href": "/actor/lorella-cravotta/"
+      },
+      {
+        "text": "Éric Houzelot",
+        "title": "Soldier",
+        "href": "/actor/eric-houzelot/"
+      },
+      {
+        "text": "Philippe Beautier",
+        "title": "Double Clones",
+        "href": "/actor/philippe-beautier/"
+      },
+      {
+        "text": "Marc Amyot",
+        "title": "Double Clones",
+        "href": "/actor/marc-amyot/"
+      },
+      {
+        "text": "Jean-Philippe Labadie",
+        "title": "Double Clones",
+        "href": "/actor/jean-philippe-labadie/"
+      },
+      {
+        "text": "Raphaèle Bouchard",
+        "title": "Miette, age",
+        "href": "/actor/raphaele-bouchard/"
+      },
+      {
+        "text": "Elisabeth Etienne",
+        "title": "Miette, age 37",
+        "href": "/actor/elisabeth-etienne/"
+      },
+      {
+        "text": "Rachel Boulenger",
+        "title": "Miette, age 43",
+        "href": "/actor/rachel-boulenger/"
+      },
+      {
+        "text": "Michel Motu",
+        "title": "Krank, age 45",
+        "href": "/actor/michel-motu/"
+      },
+      {
+        "text": "Nane Germon",
+        "title": "Miette, age 82",
+        "href": "/actor/nane-germon/"
+      },
+      {
+        "text": "Jean-Pierre Jeunet",
+        "href": "/director/jean-pierre-jeunet/"
+      },
+      {
+        "text": "Marc Caro",
+        "href": "/director/marc-caro/"
+      },
+      {
+        "text": "Félicie Dutertre",
+        "href": "/producer/felicie-dutertre/"
+      },
+      {
+        "text": "María Victoria Hebrero",
+        "href": "/producer/maria-victoria-hebrero/"
+      },
+      {
+        "text": "José Luis Lopez",
+        "href": "/producer/jose-luis-lopez-1/"
+      },
+      {
+        "text": "Arlette Mas",
+        "href": "/producer/arlette-mas/"
+      },
+      {
+        "text": "Claudie Ossard",
+        "href": "/producer/claudie-ossard/"
+      },
+      {
+        "text": "François Rabes",
+        "href": "/producer/francois-rabes/"
+      },
+      {
+        "text": "Jean-Pierre Jeunet",
+        "href": "/writer/jean-pierre-jeunet/"
+      },
+      {
+        "text": "Marc Caro",
+        "href": "/writer/marc-caro/"
+      },
+      {
+        "text": "Gilles Adrien",
+        "href": "/writer/gilles-adrien/"
+      },
+      {
+        "text": "Hervé Schneid",
+        "href": "/editor/herve-schneid/"
+      },
+      {
+        "text": "Darius Khondji",
+        "href": "/cinematography/darius-khondji/"
+      },
+      {
+        "text": "Marc Caro",
+        "href": "/production-design/marc-caro/"
+      },
+      {
+        "text": "Angelo Badalamenti",
+        "href": "/composer/angelo-badalamenti/"
+      },
+      {
+        "text": "Jean Paul Gaultier",
+        "href": "/costumes/jean-paul-gaultier/"
+      },
+      {
+        "text": "Procirep",
+        "href": "/studio/procirep/"
+      },
+      {
+        "text": "Constellation Productions",
+        "href": "/studio/constellation-productions/"
+      },
+      {
+        "text": "France 3 Cinéma",
+        "href": "/studio/france-3-cinema-1/"
+      },
+      {
+        "text": "Claudie Ossard Productions",
+        "href": "/studio/claudie-ossard-productions/"
+      },
+      {
+        "text": "Eurimages",
+        "href": "/studio/eurimages/"
+      },
+      {
+        "text": "MEDIA Programme of the European Union",
+        "href": "/studio/media-programme-of-the-european-union/"
+      },
+      {
+        "text": "Cofimage 5",
+        "href": "/studio/cofimage-5/"
+      },
+      {
+        "text": "Televisión Española (TVE)",
+        "href": "/studio/television-espanola-tve-2/"
+      },
+      {
+        "text": "Tele München Fernseh Produktionsgesellschaft (TMG)",
+        "href": "/studio/tele-munchen-fernseh-produktionsgesellschaft-tmg/"
+      },
+      {
+        "text": "Club d'Investissement Média",
+        "href": "/studio/club-dinvestissement-media/"
+      },
+      {
+        "text": "Canal+ España",
+        "href": "/studio/canal-espana-2/"
+      },
+      {
+        "text": "Elías Querejeta Producciones Cinematográficas S.L.",
+        "href": "/studio/elias-querejeta-producciones-cinematograficas-sl/"
+      },
+      {
+        "text": "Centre National de la Cinématographie (CNC)",
+        "href": "/studio/centre-national-de-la-cinematographie-cnc-1/"
+      },
+      {
+        "text": "Victoires Productions",
+        "href": "/studio/victoires-productions/"
+      },
+      {
+        "text": "Constellation",
+        "href": "/studio/constellation/"
+      },
+      {
+        "text": "Lumière Pictures",
+        "href": "/studio/lumiere-pictures/"
+      },
+      {
+        "text": "Canal+",
+        "href": "/studio/canal/"
+      },
+      {
+        "text": "Studio Image",
+        "href": "/studio/studio-image/"
+      },
+      {
+        "text": "Cofimage 4",
+        "href": "/studio/cofimage-4/"
+      },
+      {
+        "text": "Ossane",
+        "href": "/studio/ossane/"
+      },
+      {
+        "text": "Phoenix Images",
+        "href": "/studio/phoenix-images/"
+      },
+      {
+        "text": "France",
+        "href": "/films/country/france/"
+      },
+      {
+        "text": "Germany",
+        "href": "/films/country/germany/"
+      },
+      {
+        "text": "Spain",
+        "href": "/films/country/spain/"
+      },
+      {
+        "text": "French",
+        "href": "/films/language/french/"
+      },
+      {
+        "text": "Cantonese",
+        "href": "/films/language/cantonese/"
+      },
+      {
+        "text": "science fiction",
+        "href": "/films/genre/science-fiction/"
+      },
+      {
+        "text": "fantasy",
+        "href": "/films/genre/fantasy/"
+      },
+      {
+        "text": "adventure",
+        "href": "/films/genre/adventure/"
+      },
+      {
+        "text": "IMDb",
+        "href": "http://www.imdb.com/title/tt0112682/maindetails"
+      },
+      {
+        "text": "TMDb",
+        "href": "https://www.themoviedb.org/movie/902/"
+      },
+      {
+        "text": "Share",
+        "href": "#"
+      },
+      {
+        "text": "Tweet",
+        "title": "Tweet a link",
+        "href": "https://twitter.com/intent/tweet?text=The%20City%20of%20Lost%20Children%20%281995%29%20on%20%40letterboxd%3A%20https%3A%2F%2Fboxd.it%2F29k8"
+      },
+      {
+        "text": "Share",
+        "title": "Share to Facebook",
+        "href": "https://www.facebook.com/dialog/feed?app_id=173683136069040&link=https%3A%2F%2Fletterboxd.com%2Ffilm%2Fthe-city-of-lost-children%2F&picture=https://a.ltrbxd.com/resized/sm/upload/mg/mi/lj/8v/dr7PpAlJe1cige23o6HrnxIYMcw-0-230-0-345-crop.jpg?k=964986bbcc&name=The%20City%20of%20Lost%20Children%20%281995%29%20on%20Letterboxd.com&caption=Directed%20by%20Jean-Pierre%20Jeunet%2C%20Marc%20Caro&description=A%20scientist%20in%20a%20surrealist%20society%20kidnaps%20children%20to%20steal%20their%20dreams%2C%20hoping%20that%20they%20slow%20his%20aging%20process.&message=&display=popup&redirect_uri=https://letterboxd.com/facebook-share"
+      },
+      {
+        "text": "Ratings",
+        "title": "Weighted average of 3.74 based on 3,567 ratings",
+        "href": "/film/the-city-of-lost-children/ratings/"
+      },
+      {
+        "text": "15 half-★ ratings (0%)",
+        "title": "15 half-★ ratings (0%)",
+        "href": "/film/the-city-of-lost-children/ratings/by/rating/"
+      },
+      {
+        "text": "24 ★ ratings (1%)",
+        "title": "24 ★ ratings (1%)",
+        "href": "/film/the-city-of-lost-children/ratings/by/rating/"
+      },
+      {
+        "text": "19 ★½ ratings (1%)",
+        "title": "19 ★½ ratings (1%)",
+        "href": "/film/the-city-of-lost-children/ratings/by/rating/"
+      },
+      {
+        "text": "101 ★★ ratings (3%)",
+        "title": "101 ★★ ratings (3%)",
+        "href": "/film/the-city-of-lost-children/ratings/by/rating/"
+      },
+      {
+        "text": "170 ★★½ ratings (5%)",
+        "title": "170 ★★½ ratings (5%)",
+        "href": "/film/the-city-of-lost-children/ratings/by/rating/"
+      },
+      {
+        "text": "545 ★★★ ratings (15%)",
+        "title": "545 ★★★ ratings (15%)",
+        "href": "/film/the-city-of-lost-children/ratings/by/rating/"
+      },
+      {
+        "text": "741 ★★★½ ratings (21%)",
+        "title": "741 ★★★½ ratings (21%)",
+        "href": "/film/the-city-of-lost-children/ratings/by/rating/"
+      },
+      {
+        "text": "1,127 ★★★★ ratings (32%)",
+        "title": "1,127 ★★★★ ratings (32%)",
+        "href": "/film/the-city-of-lost-children/ratings/by/rating/"
+      },
+      {
+        "text": "415 ★★★★½ ratings (12%)",
+        "title": "415 ★★★★½ ratings (12%)",
+        "href": "/film/the-city-of-lost-children/ratings/by/rating/"
+      },
+      {
+        "text": "410 ★★★★★ ratings (11%)",
+        "title": "410 ★★★★★ ratings (11%)",
+        "href": "/film/the-city-of-lost-children/ratings/by/rating/"
+      },
+      {
+        "text": "Popular reviews",
+        "href": "/film/the-city-of-lost-children/reviews/by/activity/"
+      },
+      {
+        "text": "More",
+        "href": "/film/the-city-of-lost-children/reviews/by/activity/"
+      },
+      {
+        "text": "",
+        "href": "/mr_dulac/"
+      },
+      {
+        "text": "Review by Mr. DuLac",
+        "title": "View this review by Mr. DuLac",
+        "href": "/mr_dulac/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "12",
+        "href": "/mr_dulac/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "Jean-Pierre Jeunet",
+        "href": "http://letterboxd.com/director/jean-pierre-jeunet/"
+      },
+      {
+        "text": "Amélie",
+        "href": "http://letterboxd.com/mr_dulac/film/amelie/"
+      },
+      {
+        "text": "",
+        "href": "/dirkh/"
+      },
+      {
+        "text": "Review by DirkH",
+        "title": "View this review by DirkH",
+        "href": "/dirkh/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "5",
+        "href": "/dirkh/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "",
+        "href": "/hunkamunka/"
+      },
+      {
+        "text": "Review by hunkamunka",
+        "title": "View this review by hunkamunka",
+        "href": "/hunkamunka/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "1",
+        "href": "/hunkamunka/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "",
+        "href": "/georgieramone/"
+      },
+      {
+        "text": "Review by George Hanna-Wilson",
+        "title": "View this review by George Hanna-Wilson",
+        "href": "/georgieramone/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "2",
+        "href": "/georgieramone/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "",
+        "href": "/daikaijutanuki/"
+      },
+      {
+        "text": "Review by Devon Seltzer",
+        "title": "View this review by Devon Seltzer",
+        "href": "/daikaijutanuki/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "",
+        "href": "/samuelbowie68/"
+      },
+      {
+        "text": "Review by Dan The Idiot",
+        "title": "View this review by Dan The Idiot",
+        "href": "/samuelbowie68/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "3",
+        "href": "/samuelbowie68/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "Recent reviews",
+        "href": "/film/the-city-of-lost-children/reviews/by/added/"
+      },
+      {
+        "text": "More",
+        "href": "/film/the-city-of-lost-children/reviews/by/added/"
+      },
+      {
+        "text": "",
+        "href": "/recreation/"
+      },
+      {
+        "text": "Review by ReCreation",
+        "title": "View this review by ReCreation",
+        "href": "/recreation/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "",
+        "href": "/hamsteralliance/"
+      },
+      {
+        "text": "Review by Hamst3r",
+        "title": "View this review by Hamst3r",
+        "href": "/hamsteralliance/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "",
+        "href": "/fightclubitis/"
+      },
+      {
+        "text": "Review by fightclubitis",
+        "title": "View this review by fightclubitis",
+        "href": "/fightclubitis/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "Delicatessen",
+        "href": "https://letterboxd.com/fightclubitis/film/delicatessen/"
+      },
+      {
+        "text": "",
+        "href": "/haikupat/"
+      },
+      {
+        "text": "Review by HaikuPat",
+        "title": "View this review by HaikuPat",
+        "href": "/haikupat/film/the-city-of-lost-children/1/"
+      },
+      {
+        "text": "",
+        "href": "/aosyka/"
+      },
+      {
+        "text": "Review by Andrei",
+        "title": "View this review by Andrei",
+        "href": "/aosyka/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "",
+        "href": "/hotdonkeybear/"
+      },
+      {
+        "text": "Review by HotDonkeyBear",
+        "title": "View this review by HotDonkeyBear",
+        "href": "/hotdonkeybear/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "2",
+        "href": "/hotdonkeybear/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "",
+        "href": "/benjybox/"
+      },
+      {
+        "text": "Review by Ben Challoner",
+        "title": "View this review by Ben Challoner",
+        "href": "/benjybox/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "Sudden Double Deep",
+        "href": "http://suddendoubledeep.com"
+      },
+      {
+        "text": "",
+        "href": "/777/"
+      },
+      {
+        "text": "Review by Sabrine",
+        "title": "View this review by Sabrine",
+        "href": "/777/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "",
+        "href": "/charlimane/"
+      },
+      {
+        "text": "Review by Charlie",
+        "title": "View this review by Charlie",
+        "href": "/charlimane/film/the-city-of-lost-children/"
+      },
+      {
+        "text": "Popular Lists",
+        "href": "/film/the-city-of-lost-children/lists/by/popular/"
+      },
+      {
+        "text": "More",
+        "href": "/film/the-city-of-lost-children/lists/by/popular/"
+      },
+      {
+        "text": "",
+        "href": "/tobiasandersen2/list/random-movie-roulette/"
+      },
+      {
+        "text": "Random Movie Roulette",
+        "href": "/tobiasandersen2/list/random-movie-roulette/"
+      },
+      {
+        "text": "",
+        "href": "/tobiasandersen2/"
+      },
+      {
+        "text": "Tobias Andersen",
+        "href": "/tobiasandersen2/"
+      },
+      {
+        "text": "1,412",
+        "href": "/tobiasandersen2/list/random-movie-roulette/likes/"
+      },
+      {
+        "text": "133",
+        "href": "/tobiasandersen2/list/random-movie-roulette/#comments"
+      },
+      {
+        "text": "Edit",
+        "href": "/tobiasandersen2/list/random-movie-roulette/edit/"
+      },
+      {
+        "text": "www.random.org/",
+        "href": "https://www.random.org/"
+      },
+      {
+        "text": "",
+        "href": "/v6446v/list/weird-list-of-weird-movies/"
+      },
+      {
+        "text": "Weird List of Weird Movies",
+        "href": "/v6446v/list/weird-list-of-weird-movies/"
+      },
+      {
+        "text": "",
+        "href": "/v6446v/"
+      },
+      {
+        "text": "BrotherZERO",
+        "href": "/v6446v/"
+      },
+      {
+        "text": "1,140",
+        "href": "/v6446v/list/weird-list-of-weird-movies/likes/"
+      },
+      {
+        "text": "18",
+        "href": "/v6446v/list/weird-list-of-weird-movies/#comments"
+      },
+      {
+        "text": "Edit",
+        "href": "/v6446v/list/weird-list-of-weird-movies/edit/"
+      },
+      {
+        "text": "",
+        "href": "/drivefiction19/list/they-arent-films-theyre-experiences/"
+      },
+      {
+        "text": "They aren't films; they're experiences",
+        "href": "/drivefiction19/list/they-arent-films-theyre-experiences/"
+      },
+      {
+        "text": "",
+        "href": "/drivefiction19/"
+      },
+      {
+        "text": "Simon Ramshaw",
+        "href": "/drivefiction19/"
+      },
+      {
+        "text": "3,916",
+        "href": "/drivefiction19/list/they-arent-films-theyre-experiences/likes/"
+      },
+      {
+        "text": "361",
+        "href": "/drivefiction19/list/they-arent-films-theyre-experiences/#comments"
+      },
+      {
+        "text": "Edit",
+        "href": "/drivefiction19/list/they-arent-films-theyre-experiences/edit/"
+      },
+      {
+        "text": "About",
+        "href": "/about/"
+      },
+      {
+        "text": "News",
+        "href": "http://news.letterboxd.com/"
+      },
+      {
+        "text": "Pro",
+        "href": "/pro/"
+      },
+      {
+        "text": "Apps",
+        "href": "/apps/"
+      },
+      {
+        "text": "Year in Review",
+        "href": "/year-in-review/"
+      },
+      {
+        "text": "Help",
+        "href": "/welcome/"
+      },
+      {
+        "text": "Feedback",
+        "title": "Provide feedback to Letterboxd",
+        "href": "#"
+      },
+      {
+        "text": "Terms",
+        "href": "/legal/terms-of-use/"
+      },
+      {
+        "text": "API",
+        "href": "/api-coming-soon/"
+      },
+      {
+        "text": "Contact",
+        "href": "/contact/"
+      },
+      {
+        "text": "Twitter",
+        "title": "Letterboxd on Twitter",
+        "href": "https://twitter.com/letterboxd"
+      },
+      {
+        "text": "Facebook",
+        "title": "Letterboxd on Facebook",
+        "href": "https://www.facebook.com/letterboxd"
+      },
+      {
+        "text": "Instagram",
+        "title": "Letterboxd on Instagram",
+        "href": "https://www.instagram.com/letterboxd"
+      },
+      {
+        "text": "fans",
+        "href": "/about/crew/"
+      },
+      {
+        "text": "Film data",
+        "href": "https://letterboxd.com/about/film-data/"
+      },
+      {
+        "text": "TMDb",
+        "href": "https://www.themoviedb.org"
+      },
+      {
+        "text": "Mobile site",
+        "href": "#"
+      }
+    ]
+  },
+  "opengraph": {
+    "og:type": "video.movie",
+    "og:url": "https://letterboxd.com/film/the-city-of-lost-children/",
+    "og:title": "The City of Lost Children (1995)",
+    "og:description": "A scientist in a surrealist society kidnaps children to steal their dreams, hoping that they slow his aging process.",
+    "og:image": "https://a.ltrbxd.com/resized/sm/upload/wm/t3/m0/ke/city-of-lost-children-2-1200-1200-675-675-crop-000000.jpg?k=e7bbb99dd9"
+  }
+}
