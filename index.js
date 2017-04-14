@@ -26,10 +26,10 @@ app.post('/slack/post', function(req, res){
         response_type: "in_channel",
         "attachments": [
           {
-            "text": "Location: " + location + "\n"
-                  + "Temperature: " + temperature + "\n"
-                  + "Condition: " + weatherCondition,
-            "image_url": icon_url,
+            "text": "Location: Fish\n"
+                  + "Temperature: Chips\n"
+                  + "Condition: Sausage",
+            "image_url": "http://placekitten.com.s3.amazonaws.com/homepage-samples/96/139.jpg",
           }
         ]
       };
