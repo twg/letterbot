@@ -26,9 +26,9 @@ app.post('/slack/post', function(req, res){
         response_type: "in_channel",
         "attachments": [
           {
-            "text": "Location: Fish\n"
-                  + "Temperature: Chips\n"
-                  + "Condition: Sausage",
+            "text": "Movie: Charlie and the Chocolate Factory\n"
+                  + "Year: 1971\n"
+                  + "Rating : 4.7/5",
             "image_url": "http://placekitten.com.s3.amazonaws.com/homepage-samples/96/139.jpg",
           }
         ]
