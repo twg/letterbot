@@ -16,6 +16,7 @@ app.get('/', function(req, res){
 app.post('/slack/post', function(req, res){
   //take a message from Slack slash command
   var query = req.body.text;
+  var responseURL = req.body.response_url;
   console.log(query);
 
   // Handle Empty Request
@@ -57,7 +58,8 @@ app.post('/slack/post', function(req, res){
 
 				else {
 					// MORE THAN ONE RESULT (&& ???)
-					res.send("SOME OTHER CASE for " + frequest);
+					//res.send("SOME OTHER CASE for " + frequest);
+					return chooseResult(frequest, res, films, responseURL);
 				}
 		    }
 		    else {
@@ -71,6 +73,75 @@ app.post('/slack/post', function(req, res){
 
     } // End of non-empty request loop
 });
+
+
+function chooseResult(frequest, res, films, responseURL) {
+
+		//res.send("SOME OTHER CASE for " + frequest);
+	    res.status(200).end() // best practice to respond with empty 200 status code
+
+		var message = {
+		    "text": "Would you like to play a game?",
+		    "attachments": [
+		        {
+		            "text": "Choose a game to play",
+		            "fallback": "You are unable to choose a game",
+		            "callback_id": "wopr_game",
+		            "color": "#3AA3E3",
+		            "attachment_type": "default",
+		            "actions": [
+		                {
+		                    "name": "game",
+		                    "text": "Chess",
+		                    "type": "button",
+		                    "value": "chess"
+		                },
+		                {
+		                    "name": "game",
+		                    "text": "Falken's Maze",
+		                    "type": "button",
+		                    "value": "maze"
+		                },
+		                {
+		                    "name": "game",
+		                    "text": "Thermonuclear War",
+		                    "style": "danger",
+		                    "type": "button",
+		                    "value": "war",
+		                    "confirm": {
+		                        "title": "Are you sure?",
+		                        "text": "Wouldn't you prefer a good game of chess?",
+		                        "ok_text": "Yes",
+		                        "dismiss_text": "No"
+		                    }
+		                }
+		            ]
+		        }
+		    ]
+		}
+
+		sendButtonResponse(responseURL, message);
+
+}
+
+function sendButtonResponse(responseURL, JSONmessage) {
+
+    var postOptions = {
+        uri: responseURL,
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json'
+        },
+        json: JSONmessage
+    }
+
+    request(postOptions, (error, response, body) => {
+        if (error){
+            // handle errors as you see fit
+        }
+    })
+
+}
 
 
 function returnSingle(frequest, res, link) {
