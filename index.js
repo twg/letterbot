@@ -93,6 +93,8 @@ function chooseResult(frequest, res, films, responseURL) {
 
 	var message = {
 	    "text": "Which movie were you thinking of?",
+	    "replace_original": false,
+	    "response_type": "ephemeral",
 	    "attachments": [
 	        {
 	            "text": "Choose a movie",
