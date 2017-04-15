@@ -1,0 +1,15 @@
+body: 
+{ token: 'pmk9rJBoXu6HUyHNvfPvXU3L',
+team_id: 'T4GG0CZMW',
+team_domain: 'movierecos',
+channel_id: 'C4YNYPSHW',
+channel_name: 'robot',
+user_id: 'U4H9ZPNUV',
+user_name: 'travis',
+command: '/movie',
+text: 'Species',
+response_url: 'https://hooks.slack.com/commands/T4GG0CZMW/169681037076/EOkd6rCcbSfJpwYNwn2MICDN' }
+
+
+// THE WORKING WAY TO POST TO THE LOCAL INSTANCE
+curl -X POST -d 'token=my-token-here&channel=#channel-name-or-id&text=Species&username=otherusername' localhost:9001/slack/post

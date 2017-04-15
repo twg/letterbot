@@ -16,7 +16,7 @@ app.get('/', function(req, res){
 app.post('/slack/post', function(req, res){
   //take a message from Slack slash command
   var query = req.body.text;
-  console.log(req);
+  console.log(query);
 
   // Handle Empty Request
   if (query == ''){
@@ -33,38 +33,38 @@ app.post('/slack/post', function(req, res){
   		var frequest = query;
 		var searchurl = "https://letterboxd.com/search/films/" + frequest + "/";
 
-		// suq(searchurl, function (err, json, body) {
-	 //    	if (!err) {
+		suq(searchurl, function (err, json, body) {
+	    	if (!err) {
 
-		//         var films = json.tags.links.filter(function (el) {
-		// 	    	return (el.href.includes("/film/") && el.title);
-		// 		});
+		        var films = json.tags.links.filter(function (el) {
+			    	return (el.href.includes("/film/") && el.title);
+				});
 
-		// 		// Handle error / zero results (turns out empty valid films links does that)
+				// Handle error / zero results (turns out empty valid films links does that)
 
-		// 		if (films.length == 0) {
-		// 			// NO RESULTS FOUND
-		// 			res.send("NO RESULTS for " + frequest);
-		// 		}
+				if (films.length == 0) {
+					// NO RESULTS FOUND
+					res.send("NO RESULTS for " + frequest);
+				}
 
-		// 		else if (films[0].text == frequest && films[1].text != frequest) {
-		// 			// SINGLE MATCH FOUND
-		// 			//res.send("SINGLE PERFECT MATCH for " + frequest + "\n" + "Film 0: " + films[0].text + "\n" + "Film 1: " + films[1].text)
-		// 			return returnSingle(frequest);
+				else if (films[0].text == frequest && films[1].text != frequest) {
+					// SINGLE MATCH FOUND
+					//res.send("SINGLE PERFECT MATCH for " + frequest + "\n" + "Film 0: " + films[0].text + "\n" + "Film 1: " + films[1].text)
+					return returnSingle(frequest, res, films[0].href);
 
-		// 		}
+				}
 
-		// 		else {
-		// 			// MORE THAN ONE RESULT (&& ???)
-		// 			res.send("SOME OTHER CASE for " + frequest);
-		// 		}
-		//     }
-		//     else {
-		//     	// SEARCH SCRAPE FAILED
-		//     	res.send("SOME SORT OF ELEGANT ERROR HANDLING BACK TO THE SLACKBOT");
-		//     }
+				else {
+					// MORE THAN ONE RESULT (&& ???)
+					res.send("SOME OTHER CASE for " + frequest);
+				}
+		    }
+		    else {
+		    	// SEARCH SCRAPE FAILED
+		    	res.send("SOME SORT OF ELEGANT ERROR HANDLING BACK TO THE SLACKBOT");
+		    }
 
-		// });
+		});
 
  
 
@@ -72,15 +72,15 @@ app.post('/slack/post', function(req, res){
 });
 
 
-function returnSingle(frequest) {
+function returnSingle(frequest, res, link) {
 
 	    var body = {
 	        response_type: "in_channel",
 	        "attachments": [
 	          {
-	            "text": "Movie: Charlie and the Chocolate Factory : .." + frequest +  "..\n"
-	                  + "Year: 1971\n"
-	                  + "Rating : 4.7/5",
+	            "text": "Movie: " + frequest +  "\n"
+	                  + "Link: http://letterboxd.com" + link + "\n"
+	                  + "Rating : TBD",
 	            "image_url": "http://placekitten.com.s3.amazonaws.com/homepage-samples/96/139.jpg",
 	          }
 	        ]
