@@ -81,38 +81,32 @@ function chooseResult(frequest, res, films, responseURL) {
 	    res.status(200).end() // best practice to respond with empty 200 status code
 
 		var message = {
-		    "text": "Would you like to play a game?",
+		    "text": "Which movie were you thinking of?",
 		    "attachments": [
 		        {
-		            "text": "Choose a game to play",
-		            "fallback": "You are unable to choose a game",
-		            "callback_id": "wopr_game",
+		            "text": "Choose a movie",
+		            "fallback": "Y U NO MOVIE?",
+		            "callback_id": "i_dont_know_how_to_use_this",
 		            "color": "#3AA3E3",
 		            "attachment_type": "default",
 		            "actions": [
 		                {
-		                    "name": "game",
-		                    "text": "Chess",
+		                    "name": "movie",
+		                    "text": films[0].text,
 		                    "type": "button",
-		                    "value": "chess"
+		                    "value": films[0].href
 		                },
 		                {
-		                    "name": "game",
-		                    "text": "Falken's Maze",
+		                    "name": "movie",
+		                    "text": films[1].text,
 		                    "type": "button",
-		                    "value": "maze"
+		                    "value": films[1].href
 		                },
 		                {
-		                    "name": "game",
-		                    "text": "Thermonuclear War",
-		                    "style": "danger",
+		                    "name": "movie",
+		                    "text": films[2].text,
 		                    "type": "button",
-		                    "value": "war",
-		                    "confirm": {
-		                        "title": "Are you sure?",
-		                        "text": "Wouldn't you prefer a good game of chess?",
-		                        "ok_text": "Yes",
-		                        "dismiss_text": "No"
+		                    "value": films[2].href
 		                    }
 		                }
 		            ]
