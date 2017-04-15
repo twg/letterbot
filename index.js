@@ -86,6 +86,8 @@ app.post('/slack/choice', function(req, res){
 
 function chooseResult(frequest, res, films, responseURL) {
 
+		// TODO : Add "None of the above" option to the buttons
+
 	    res.status(200).end() // best practice to respond with empty 200 status code
 
 		var message = {
@@ -147,13 +149,13 @@ function sendButtonResponse(responseURL, JSONmessage) {
 
 function returnSingle(frequest, res, link) {
 
+		// TODO : Add the TWG folks' scores
+
 		var movie_url = "https://letterboxd.com" + link;
 
 		suq(movie_url, function (err, json, body) {
 
 	    	if (!err) {
-		        //console.log('scraped json is:', JSON.stringify(json, null, 2));
-		        //console.log('html body is', body);
 
 		        var movie_details = {};
 
@@ -214,7 +216,7 @@ function returnSingle(frequest, res, link) {
 		                  + "Link: " + movie_details.url + "\n"
 		                  + "Description: " + movie_details.desc + "\n"
 		                  + "Rating : TODO",
-		            "image_url": movie_details.cover,
+		            "thumb_url": movie_details.cover,
 		          }
 		        ]
 		    };
