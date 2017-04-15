@@ -17,7 +17,7 @@ app.post('/slack/post', function(req, res){
   //take a message from Slack slash command
   var query = req.body.text;
   var responseURL = req.body.response_url;
-  console.log(query);
+  console.log("QUERY FROM SLACK : " + query);
 
   // Handle Empty Request
   if (query == ''){
