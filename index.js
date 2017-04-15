@@ -74,6 +74,21 @@ app.post('/slack/post', function(req, res){
     } // End of non-empty request loop
 });
 
+app.post('/slack/choice', function(req, res){
+  //take a message from Slack slash command
+  // var query = req.body.text;
+  // var responseURL = req.body.response_url;
+  // console.log("QUERY FROM SLACK : " + query);
+
+    res.status(200).end() // best practice to respond with 200 status
+    var actionJSONPayload = JSON.parse(req.body.payload) // parse URL-encoded payload JSON string
+    var message = {
+        "text": actionJSONPayload.user.name+" clicked: "+actionJSONPayload.actions[0].name,
+        "replace_original": false
+    }
+    sendButtonResponse(actionJSONPayload.response_url, message)
+
+});
 
 function chooseResult(frequest, res, films, responseURL) {
 
