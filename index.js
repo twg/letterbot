@@ -92,19 +92,19 @@ function chooseResult(frequest, res, films, responseURL) {
 		            "actions": [
 		                {
 		                    "name": "movie",
-		                    "text": films[0].text,
+		                    "text": films[0].title,
 		                    "type": "button",
 		                    "value": films[0].href
 		                },
 		                {
 		                    "name": "movie",
-		                    "text": films[1].text,
+		                    "text": films[1].title,
 		                    "type": "button",
 		                    "value": films[1].href
 		                },
 		                {
 		                    "name": "movie",
-		                    "text": films[2].text,
+		                    "text": films[2].title,
 		                    "type": "button",
 		                    "value": films[2].href
 		                }
