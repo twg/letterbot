@@ -162,7 +162,7 @@ function returnSingle(frequest, res, link) {
 
 		        movie_details.url = movie_url;
 		        movie_details.title = json.opengraph['og:title'];
-		        movie_details.desc = json.meta.description;
+		        movie_details.desc = json.meta['twitter:description'];
 		        movie_details.screen = json.opengraph['og:image'];
 
 		        var movieschema = json.microdata.filter(function (el) {
