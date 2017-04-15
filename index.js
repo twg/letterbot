@@ -91,7 +91,7 @@ app.post('/slack/choice', function(req, res){
     // }
     //sendButtonResponse(actionJSONPayload.response_url, message)
 
-    //returnSingle(frequest, res, link);
+    returnSingle('monkeytennis', res, '/film/dodgeball-a-true-underdog-story/');
 
 });
 
