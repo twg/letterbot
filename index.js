@@ -51,7 +51,7 @@ app.post('/slack/post', function(req, res){
 						);
 				}
 
-				else if (films[0].text == frequest && films[1].text != frequest) {
+				else if (films[0].text.toLowerCase() == frequest.toLowerCase() && films[1].text.toLowerCase() != frequest.toLowerCase()) {
 					// SINGLE MATCH FOUND
 					//res.send("SINGLE PERFECT MATCH for " + frequest + "\n" + "Film 0: " + films[0].text + "\n" + "Film 1: " + films[1].text)
 					return returnSingle(frequest, res, films[0].href);
