@@ -78,6 +78,8 @@ app.post('/slack/post', function(req, res){
 
 app.post('/slack/choice', function(req, res){
 
+	res.status(200).end() // best practice to respond with empty 200 status code
+
 	// Take the button choice from the response, and return the single movie
     var actionJSONPayload = JSON.parse(req.body.payload);
     
