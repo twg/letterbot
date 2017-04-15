@@ -201,6 +201,7 @@ function returnSingle(frequest, res, link) {
 
 	    var return_body = {
 	        "response_type": "in_channel",
+	        "replace_original": false,
 	        "attachments": [
 	          {
 	            "text": "Movie: " + movie_details.title +  "\n"
