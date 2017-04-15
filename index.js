@@ -73,7 +73,7 @@ app.post('/slack/choice', function(req, res){
 
 	// #################### HANDLE BUTTON CLICK RESPONSES ######################
 
-	res.status(200).end(); // Avoid timeout with 200 status code
+	//res.status(200).end(); // Avoid timeout with 200 status code
 
     var actionJSONPayload = JSON.parse(req.body.payload);
 
