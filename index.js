@@ -107,7 +107,6 @@ function chooseResult(frequest, res, films, responseURL) {
 		                    "text": films[2].text,
 		                    "type": "button",
 		                    "value": films[2].href
-		                    }
 		                }
 		            ]
 		        }
