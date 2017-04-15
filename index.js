@@ -84,6 +84,7 @@ app.post('/slack/choice', function(req, res){
     var actionJSONPayload = JSON.parse(req.body.payload) // parse URL-encoded payload JSON string
     
     console.log(actionJSONPayload);
+    console.log(actionJSONPayload.actions[0].value)
 
     // var message = {
     //     "text": actionJSONPayload.user.name+" clicked: "+actionJSONPayload.actions[0].name,
@@ -91,7 +92,7 @@ app.post('/slack/choice', function(req, res){
     // }
     //sendButtonResponse(actionJSONPayload.response_url, message)
 
-    returnSingle('monkeytennis', res, '/film/dodgeball-a-true-underdog-story/');
+    returnSingle('monkeytennis', res, actionJSONPayload.actions[0].value);
 
 });
 
