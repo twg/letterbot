@@ -96,7 +96,7 @@ function chooseResult(frequest, res, films, responseURL) {
 	    "attachments": [
 	        {
 	            "text": "Choose a movie",
-	            "fallback": "Y U NO MOVIE?",
+	            "fallback": "What Does Fallback Do?",
 	            "callback_id": "i_dont_know_how_to_use_this",
 	            "color": "#3AA3E3",
 	            "attachment_type": "default",
