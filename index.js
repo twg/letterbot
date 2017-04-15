@@ -78,7 +78,7 @@ app.post('/slack/post', function(req, res){
 
 app.post('/slack/choice', function(req, res){
 
-	res.status(200).end() // best practice to respond with empty 200 status code
+	//res.status(200).end() // best practice to respond with empty 200 status code
 
 	// Take the button choice from the response, and return the single movie
     var actionJSONPayload = JSON.parse(req.body.payload);
@@ -86,18 +86,30 @@ app.post('/slack/choice', function(req, res){
     //returnSingle('monkeytennis', res, actionJSONPayload.actions[0].value);
 
 
-    var message = {
-        "response_type": "in_channel",
-        "text": "TEST OF VISIBILITY",
-        "attachments": [
-          {
-            "text": "Movie: " + actionJSONPayload.actions[0].value
-          }
-        ]
-    };
+    // var message = {
+    //     "response_type": "in_channel",
+    //     "text": "TEST OF VISIBILITY",
+    //     "attachments": [
+    //       {
+    //         "text": "Movie: " + actionJSONPayload.actions[0].value
+    //       }
+    //     ]
+    // };
 
 
-    sendButtonResponse(actionJSONPayload.response_url, message)
+    		    var return_body = {
+		        "response_type": "in_channel",
+		        "text": "TEST OF VISIBILITY",
+		        "attachments": [
+		          {
+		            "text": "Movie: " + actionJSONPayload.actions[0].value
+		          }
+		        ]
+		    };
+		    res.send(return_body); 
+
+
+    //sendButtonResponse(actionJSONPayload.response_url, message)
 
 });
 
@@ -113,7 +125,6 @@ function chooseResult(frequest, res, films, responseURL) {
 		        {
 		            "text": "Choose a movie",
 		            "fallback": "Y U NO MOVIE?",
-		            "replace_original" : true,
 		            "callback_id": "i_dont_know_how_to_use_this",
 		            "color": "#3AA3E3",
 		            "attachment_type": "default",
@@ -227,7 +238,7 @@ function returnSingle(frequest, res, link) {
 		function return_to_slack(movie_details, res){
 
 		    var return_body = {
-		        response_type: "in_channel",
+		        "response_type": "in_channel",
 		        "attachments": [
 		          {
 		            "text": "Movie: " + movie_details.title +  "\n"
