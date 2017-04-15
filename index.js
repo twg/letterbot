@@ -88,6 +88,7 @@ app.post('/slack/choice', function(req, res){
 
     var message = {
         response_type: "in_channel",
+        "text": "TEST OF VISIBILITY",
         "attachments": [
           {
             "text": "Movie: " + actionJSONPayload.actions[0].value
