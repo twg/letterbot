@@ -46,7 +46,9 @@ app.post('/slack/post', function(req, res){
 
 				if (films.length == 0) {
 					// NO RESULTS FOUND
-					res.send("NO RESULTS for " + frequest);
+					res.send("Letterbot can't find results for " + frequest + "\n" +
+						"Please try another search"
+						);
 				}
 
 				else if (films[0].text == frequest && films[1].text != frequest) {
@@ -75,30 +77,15 @@ app.post('/slack/post', function(req, res){
 });
 
 app.post('/slack/choice', function(req, res){
-  //take a message from Slack slash command
-  // var query = req.body.text;
-  // var responseURL = req.body.response_url;
-  // console.log("QUERY FROM SLACK : " + query);
 
-    //res.status(200).end() // best practice to respond with 200 status
-    var actionJSONPayload = JSON.parse(req.body.payload) // parse URL-encoded payload JSON string
-    
-    console.log(actionJSONPayload);
-    console.log(actionJSONPayload.actions[0].value)
-
-    // var message = {
-    //     "text": actionJSONPayload.user.name+" clicked: "+actionJSONPayload.actions[0].name,
-    //     "replace_original": false
-    // }
-    //sendButtonResponse(actionJSONPayload.response_url, message)
-
+	// Take the button choice from the response, and return the single movie
+    var actionJSONPayload = JSON.parse(req.body.payload);
     returnSingle('monkeytennis', res, actionJSONPayload.actions[0].value);
 
 });
 
 function chooseResult(frequest, res, films, responseURL) {
 
-		//res.send("SOME OTHER CASE for " + frequest);
 	    res.status(200).end() // best practice to respond with empty 200 status code
 
 		var message = {
