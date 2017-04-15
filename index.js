@@ -32,7 +32,7 @@ app.post('/slack/post', function(req, res){
   		var frequest = query;
 		var searchurl = "https://letterboxd.com/search/films/" + frequest + "/";
 
-		suq(url, function (err, json, body) {
+		suq(searchurl, function (err, json, body) {
 	    	if (!err) {
 
 		        var films = json.tags.links.filter(function (el) {
@@ -74,7 +74,8 @@ app.post('/slack/post', function(req, res){
 	          }
 	        ]
 	    };
-	    res.send(body);  
+	    // UNCOMMENT THIS WHEN DOING THE ACTUAL RETURN
+	    //res.send(body);  
 
     } // End of non-empty request loop
 });
