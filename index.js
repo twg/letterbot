@@ -44,7 +44,7 @@ app.post('/slack/post', function(req, res){
 
 				if (films.length == 0) {
 					// Handle error / zero results (turns out empty valid films links does that)
-					res.send( { response_type: "in_channel", 
+					res.send( { response_type: "ephemeral", 
 								text: "Letterbot can't find results for " + frequest + "\n" + "Please try another search"
 							  }
 						);
@@ -58,6 +58,9 @@ app.post('/slack/post', function(req, res){
 
 				else {
 					// MORE THAN ONE RESULT FOUND. PRESENT BUTTONS FOR OPTIONS
+					res.send( {	response_type: "in_channel", 
+								text: "Looking up multiple responses"}
+							);
 
 					return chooseResult(frequest, res, films, responseURL);
 				}
