@@ -48,7 +48,10 @@ app.post('/slack/post', function(req, res){
 
 				else if (films[0].text == frequest && films[1].text != frequest) {
 					// SINGLE MATCH FOUND
-					res.send("SINGLE PERFECT MATCH for " + frequest + "\n" + "Film 0: " + films[0].text + "\n" + "Film 1: " + films[1].text)
+					//res.send("SINGLE PERFECT MATCH for " + frequest + "\n" + "Film 0: " + films[0].text + "\n" + "Film 1: " + films[1].text)
+					returnSingle(frequest);
+					break;
+
 				}
 
 				else {
@@ -63,11 +66,19 @@ app.post('/slack/post', function(req, res){
 
 		});
 
+ 
+
+    } // End of non-empty request loop
+});
+
+
+function returnSingle(frequest) {
+
 	    var body = {
 	        response_type: "in_channel",
 	        "attachments": [
 	          {
-	            "text": "Movie: Charlie and the Chocolate Factory : .." + query +  "..\n"
+	            "text": "Movie: Charlie and the Chocolate Factory : .." + frequest +  "..\n"
 	                  + "Year: 1971\n"
 	                  + "Rating : 4.7/5",
 	            "image_url": "http://placekitten.com.s3.amazonaws.com/homepage-samples/96/139.jpg",
@@ -75,10 +86,9 @@ app.post('/slack/post', function(req, res){
 	        ]
 	    };
 	    // UNCOMMENT THIS WHEN DOING THE ACTUAL RETURN
-	    //res.send(body);  
+	    res.send(body); 
 
-    } // End of non-empty request loop
-});
+}
 
 // Tells Node which port to listen on
 app.listen(app.get('port'), function() {
