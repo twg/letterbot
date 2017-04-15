@@ -10,149 +10,119 @@ app.set('port', (process.env.PORT || 9001));
 
 
 app.get('/', function(req, res){
-  res.send("I am Letterbot. I am sad if you don't ask me about a specific movie");
+
+	// #################### HANDLE DEFAULT WEB GET REQUEST ######################
+
+	res.send("I am Letterbot. Find me in Slack!");
 });
 
 app.post('/slack/post', function(req, res){
-  //take a message from Slack slash command
-  var query = req.body.text;
-  var responseURL = req.body.response_url;
-  console.log("QUERY FROM SLACK : " + query);
 
-  // Handle Empty Request
-  if (query == ''){
-  	res.send("Letterbot needs you to ask about a movie!"); 
-  }
-  else {
+	// #################### HANDLE SLACK SLASH REQUESTS ######################
 
-		// #############################################################################
+	var frequest = req.body.text; // Requested Film Title
+	var responseURL = req.body.response_url; // Slack callback URL
+
+	if (frequest == ''){
+		// Respond to Empty Request
+		res.send("Letterbot needs you to ask about a movie!"); 
+	}
+	else {
+
 		// #################### SEARCH THE LETTERBOXD MOVIES LIST ######################
-		// #############################################################################
-
-		// TODO : DO LOWERCASE OF REQUEST + MATCH
 		// TODO : ADD YEAR AS ADDITIONAL QUALIFIER - see edge case : 2001
 
-  		var frequest = query;
 		var searchurl = "https://letterboxd.com/search/films/" + frequest + "/";
 
 		suq(searchurl, function (err, json, body) {
 	    	if (!err) {
 
 		        var films = json.tags.links.filter(function (el) {
-			    	return (el.href.includes("/film/") && el.title);
+			    	return (el.href.includes("/film/") && el.title); // Restrict results to URLs matching a film match
 				});
 
-				// Handle error / zero results (turns out empty valid films links does that)
-
 				if (films.length == 0) {
-					// NO RESULTS FOUND
+					// Handle error / zero results (turns out empty valid films links does that)
 					res.send("Letterbot can't find results for " + frequest + "\n" +
 						"Please try another search"
 						);
 				}
 
 				else if (films[0].text.toLowerCase() == frequest.toLowerCase() && films[1].text.toLowerCase() != frequest.toLowerCase()) {
-					// SINGLE MATCH FOUND
-					//res.send("SINGLE PERFECT MATCH for " + frequest + "\n" + "Film 0: " + films[0].text + "\n" + "Film 1: " + films[1].text)
+					// PERFECT SINGLE MATCH FOUND (see "Frida" for test case)
 					return returnSingle(frequest, res, films[0].href);
 
 				}
 
 				else {
-					// MORE THAN ONE RESULT (&& ???)
-					//res.send("SOME OTHER CASE for " + frequest);
+					// MORE THAN ONE RESULT FOUND. PRESENT BUTTONS FOR OPTIONS
 					return chooseResult(frequest, res, films, responseURL);
 				}
 		    }
 		    else {
 		    	// SEARCH SCRAPE FAILED
-		    	res.send("SOME SORT OF ELEGANT ERROR HANDLING BACK TO THE SLACKBOT");
+		    	res.send("Something went wrong. Sorry, please try again!");
 		    }
 
 		});
-
- 
 
     } // End of non-empty request loop
 });
 
 app.post('/slack/choice', function(req, res){
 
-	//res.status(200).end() // best practice to respond with empty 200 status code
+	// #################### HANDLE BUTTON CLICK RESPONSES ######################
 
-	// Take the button choice from the response, and return the single movie
+	res.status(200).end(); // Avoid timeout with 200 status code
+
     var actionJSONPayload = JSON.parse(req.body.payload);
-    
-    //returnSingle('monkeytennis', res, actionJSONPayload.actions[0].value);
 
-
-    // var message = {
-    //     "response_type": "in_channel",
-    //     "text": "TEST OF VISIBILITY",
-    //     "attachments": [
-    //       {
-    //         "text": "Movie: " + actionJSONPayload.actions[0].value
-    //       }
-    //     ]
-    // };
-
-
-    		    var return_body = {
-		        "response_type": "in_channel",
-		        "text": "TEST OF VISIBILITY",
-		        "attachments": [
-		          {
-		            "text": "Movie: " + actionJSONPayload.actions[0].value
-		          }
-		        ]
-		    };
-		    res.send(return_body); 
-
-
-    //sendButtonResponse(actionJSONPayload.response_url, message)
+    returnSingle('monkeytennis', res, actionJSONPayload.actions[0].value); // .value here is the URL to the chosen movie
 
 });
 
 function chooseResult(frequest, res, films, responseURL) {
 
-		// TODO : Add "None of the above" option to the buttons
+	// #################### PRESENT BUTTON OPTIONS FOR MULTI-RESULT ######################
+	// TODO : Add "None of the above" option to the buttons
+	// TOOD : What happens with only 2 films? Probably an error
 
-	    res.status(200).end() // best practice to respond with empty 200 status code
+    res.status(200).end();
 
-		var message = {
-		    "text": "Which movie were you thinking of?",
-		    "attachments": [
-		        {
-		            "text": "Choose a movie",
-		            "fallback": "Y U NO MOVIE?",
-		            "callback_id": "i_dont_know_how_to_use_this",
-		            "color": "#3AA3E3",
-		            "attachment_type": "default",
-		            "actions": [
-		                {
-		                    "name": "movie",
-		                    "text": films[0].title,
-		                    "type": "button",
-		                    "value": films[0].href
-		                },
-		                {
-		                    "name": "movie",
-		                    "text": films[1].title,
-		                    "type": "button",
-		                    "value": films[1].href
-		                },
-		                {
-		                    "name": "movie",
-		                    "text": films[2].title,
-		                    "type": "button",
-		                    "value": films[2].href
-		                }
-		            ]
-		        }
-		    ]
-		}
+	var message = {
+	    "text": "Which movie were you thinking of?",
+	    "attachments": [
+	        {
+	            "text": "Choose a movie",
+	            "fallback": "Y U NO MOVIE?",
+	            "callback_id": "i_dont_know_how_to_use_this",
+	            "color": "#3AA3E3",
+	            "attachment_type": "default",
+	            "actions": [
+	                {
+	                    "name": "movie",
+	                    "text": films[0].title,
+	                    "type": "button",
+	                    "value": films[0].href
+	                },
+	                {
+	                    "name": "movie",
+	                    "text": films[1].title,
+	                    "type": "button",
+	                    "value": films[1].href
+	                },
+	                {
+	                    "name": "movie",
+	                    "text": films[2].title,
+	                    "type": "button",
+	                    "value": films[2].href
+	                }
+	            ]
+	        }
+	    ]
+	}
 
-		sendButtonResponse(responseURL, message);
+	sendButtonResponse(responseURL, message);
 
 }
 
@@ -169,7 +139,7 @@ function sendButtonResponse(responseURL, JSONmessage) {
 
     request(postOptions, (error, response, body) => {
         if (error){
-            // handle errors as you see fit
+            // Erm? Fail hard?
         }
     })
 
@@ -178,85 +148,68 @@ function sendButtonResponse(responseURL, JSONmessage) {
 
 function returnSingle(frequest, res, link) {
 
-		// TODO : Add the TWG folks' scores
+	// #################### RETURN CARD FOR A DEFINITIVE MOVIE CHOICE ######################
+	// TODO : Add the TWG folks' scores
 
-		var movie_url = "https://letterboxd.com" + link;
+	var movie_url = "https://letterboxd.com" + link;
 
-		suq(movie_url, function (err, json, body) {
+	suq(movie_url, function (err, json, body) {
 
-	    	if (!err) {
+    	if (!err) {
 
-		        var movie_details = {};
+	        var movie_details = {};
 
+	        movie_details.url = movie_url;
+	        movie_details.title = json.opengraph['og:title'];
+	        movie_details.desc = json.meta['twitter:description'];
+	        movie_details.screen = json.opengraph['og:image'];
 
-		        movie_details.url = movie_url;
-		        movie_details.title = json.opengraph['og:title'];
-		        movie_details.desc = json.meta['twitter:description'];
-		        movie_details.screen = json.opengraph['og:image'];
+	        var movieschema = json.microdata.filter(function (el) {
+		    	return (el.type.includes("http://schema.org/Movie"));
+			});
 
-		        var movieschema = json.microdata.filter(function (el) {
-			    	return (el.type.includes("http://schema.org/Movie"));
-				});
+			movie_details.cover = movieschema[0].props.image;
 
-				movie_details.cover = movieschema[0].props.image;
+	        var ratings = json.tags.links.filter(function (el) {
+		    	return (el.text.includes("★"));
+			});
 
-		        var ratings = json.tags.links.filter(function (el) {
-			    	return (el.text.includes("★"));
-				});
+			// TODO : Turn the following into a nice request for dynamic graph image to display in card
+			// var re = new RegExp(/^([\d,]+)\s([^\s]+)/);
+			// for (i=0;i<ratings.length;i++) {
+			// 	var breakdown = re.exec(ratings[i].text);
+			// 	ratings[i].stars = breakdown[1];
+			// 	ratings[i].rating = breakdown[2];
+			// }
+			// for (i=0;i<ratings.length;i++) {
+			// console.log(ratings[i].rating + " : " + ratings[i].stars + "\n");
+			// }
 
-				var re = new RegExp(/^([\d,]+)\s([^\s]+)/);
-				//([^\s]+) ratings/
+			return_to_slack(movie_details, res);
+	    }
+	});
 
+	function return_to_slack(movie_details, res){
 
-				// for (i=0;i<ratings.length;i++) {
+		// #################### POST FORMATTED CARD/ATTACHMENT TO SLACK CHANNEL ######################
 
-				// console.log(ratings[i].text + "\n");
-
-				// var breakdown = re.exec(ratings[i].text);
-				// ratings[i].stars = breakdown[1];
-				// ratings[i].rating = breakdown[2];
-				
-				// }
-
-
-
-				// for (i=0;i<ratings.length;i++) {
-
-				// console.log(ratings[i].rating + " : " + ratings[i].stars + "\n");
-
-				// }
-
-				// TODO : Ratings, Year
-
-				return_to_slack(movie_details, res);
-
-
-		    }
-
-		});
-
-		function return_to_slack(movie_details, res){
-
-		    var return_body = {
-		        "response_type": "in_channel",
-		        "attachments": [
-		          {
-		            "text": "Movie: " + movie_details.title +  "\n"
-		                  + "Link: " + movie_details.url + "\n"
-		                  + "Description: " + movie_details.desc + "\n"
-		                  + "Rating : TODO",
-		            "thumb_url": movie_details.cover,
-		          }
-		        ]
-		    };
-		    res.send(return_body); 
-
-		}
-
-
+	    var return_body = {
+	        "response_type": "in_channel",
+	        "attachments": [
+	          {
+	            "text": "Movie: " + movie_details.title +  "\n"
+	                  + "Link: " + movie_details.url + "\n"
+	                  + "Description: " + movie_details.desc + "\n"
+	                  + "Rating : TODO",
+	            "thumb_url": movie_details.cover,
+	          }
+	        ]
+	    };
+	    res.send(return_body); 
+	}
 }
 
-// Tells Node which port to listen on
+// MAKE NODE LISTEN ON ENV OR DEFAULT PORT
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
