@@ -80,7 +80,21 @@ app.post('/slack/choice', function(req, res){
 
 	// Take the button choice from the response, and return the single movie
     var actionJSONPayload = JSON.parse(req.body.payload);
-    returnSingle('monkeytennis', res, actionJSONPayload.actions[0].value);
+    
+    //returnSingle('monkeytennis', res, actionJSONPayload.actions[0].value);
+
+
+    var message = {
+        response_type: "in_channel",
+        "attachments": [
+          {
+            "text": "Movie: " + actionJSONPayload.actions[0].value
+          }
+        ]
+    };
+
+
+    sendButtonResponse(actionJSONPayload.response_url, message)
 
 });
 
