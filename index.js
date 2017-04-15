@@ -87,7 +87,7 @@ app.post('/slack/choice', function(req, res){
 
 
     var message = {
-        response_type: "in_channel",
+        "response_type": "in_channel",
         "text": "TEST OF VISIBILITY",
         "attachments": [
           {
