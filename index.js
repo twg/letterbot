@@ -31,6 +31,7 @@ app.post('/slack/post', function(req, res){
 
 		// #################### SEARCH THE LETTERBOXD MOVIES LIST ######################
 		// TODO : ADD YEAR AS ADDITIONAL QUALIFIER - see edge case : 2001
+		// TODO : Escape frequest? See "Ferris Bueller's Day Off"
 
 		var searchurl = "https://letterboxd.com/search/films/" + frequest + "/";
 
@@ -43,8 +44,9 @@ app.post('/slack/post', function(req, res){
 
 				if (films.length == 0) {
 					// Handle error / zero results (turns out empty valid films links does that)
-					res.send("Letterbot can't find results for " + frequest + "\n" +
-						"Please try another search"
+					res.send( { response_type: "in_channel", 
+								text: "Letterbot can't find results for " + frequest + "\n" + "Please try another search"
+							  }
 						);
 				}
 
@@ -56,6 +58,7 @@ app.post('/slack/post', function(req, res){
 
 				else {
 					// MORE THAN ONE RESULT FOUND. PRESENT BUTTONS FOR OPTIONS
+
 					return chooseResult(frequest, res, films, responseURL);
 				}
 		    }
