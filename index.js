@@ -58,6 +58,7 @@ app.post('/slack/post', function(req, res){
 
 				else {
 					// MORE THAN ONE RESULT FOUND. PRESENT BUTTONS FOR OPTIONS
+					res.send( { response_type: "in_channel" }
 					return chooseResult(frequest, res, films, responseURL);
 				}
 		    }
