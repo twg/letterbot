@@ -181,14 +181,22 @@ function returnSingle(frequest, res, link) {
 		    	return (el.text.includes("★"));
 			});
 
+			var tmpCount = 0;
+			var tmpTotal = 0;
+
 			var re = new RegExp(/^([\d,]+)\s([^\s]+)/);
 			for (i=0;i<ratings.length;i++) {
 				var breakdown = re.exec(ratings[i].text);
 				ratings[i].votes = breakdown[1].replace(/,/g, '');
 				ratings[i].rating = breakdown[2];
+				tmpTotal += (ratings[i].votes * (i/2));
+				tmpCount += ratings[i].votes;
+
 			}
 
 			movie_details.ratingstring = ratings.map(function(elem){return elem.votes;}).join(",");
+			movie_details.averagerating = tmpTotal / tmpCount;
+
 
 			return_to_slack(movie_details, res);
 	    }
@@ -206,7 +214,7 @@ function returnSingle(frequest, res, link) {
 	          	"color": "#ff0000",
 	          	"title": movie_details.title,
 	          	"title_link": movie_details.url,
-	          	"author_name": "The Director Here",
+	          	"author_name": "TODO : DIRECTOR",
             	"author_link": movie_details.url,
             	"author_icon": movie_details.cover,
 	            "text": movie_details.desc,
@@ -216,16 +224,16 @@ function returnSingle(frequest, res, link) {
 	          	"fields": [
                 {
                     "title": "Genre",
-                    "value": "Horror",
+                    "value": "TODO",
                     "short": true
                 },
 				{
                     "title": "Rating",
-                    "value": "3.7/5",
+                    "value": movie_details.averagerating + "/5",
                     "short": true
                 }
             	],
-				"thumb_url": "https://chart.googleapis.com/chart?chma=0,0,25,25&chf=bg,s,FFFFFF00&cht=bvs&chs=150x150&chd=t:" + movie_details.ratingstring + "&chco=4D89F9&chds=0,1200&chbh=15,0,0"
+				"thumb_url": "https://chart.googleapis.com/chart?chma=0,0,35,35&chf=bg,s,FFFFFF00&cht=bvs&chs=150x150&chd=t:" + movie_details.ratingstring + "&chco=4D89F9&chds=0,1200&chbh=15,0,0"
 	          },
 	          {
 	          	"image_url": movie_details.screen
