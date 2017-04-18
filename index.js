@@ -227,7 +227,7 @@ function returnSingle(frequest, res, link) {
                     "short": true
                 }
             	],
-				"thumb_url": "https://chart.googleapis.com/chart?chma=0,0,50,50&chf=bg,s,FFFFFF00&cht=bvs&chs=150x150&chd=t:15,24,19,101,170,545,741,1127,415,410&chco=4D89F9&chds=0,1200&chbh=15,0,0"
+				"thumb_url": "https://chart.googleapis.com/chart?chma=0,0,20,20&chf=bg,s,FFFFFF00&cht=bvs&chs=150x150&chd=t:15,24,19,101,170,545,741,1127,415,410&chco=4D89F9&chds=0,1200&chbh=15,0,0"
 	          },
 	          {
 	          	"image_url": movie_details.screen
