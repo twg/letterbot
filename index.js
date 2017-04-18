@@ -1,3 +1,21 @@
+/*
+
+TODO ::
+ - BUG : Why does the button selected not show the 'screen' image (see : The Last Starfighter, if direct or via 'Last Starfighter' search)
+ - BUG : Bad string escaping (see : Ferris Bueller's Day Off) - assume apostrophe
+ - Would 'Year' as additional qualifier in search help? How would this work with eg. 2001
+ - Add empty values to Spread array, to avoid broken graphs (see : Exper Zenon (1991))
+ - Add color to rating attachment based on quality/score
+ - Add "None" option to the buttons if search failed to find right film?
+ - Remove buttons after selecting one (currently does double header-send when I try)
+ - Create combined image for Cover + Screen
+ - Show Language in results?
+ - Should use full description, or shortened Twitter form?
+ - Show which TWGees have watched (via a follower list?)
+ - Show/Search third party services eg. Netflix?
+ - I'm Feeling Lucky / Top 100 IMDB / Recent Searches ... discovery
+*/
+
 var express = require('express');
 var app = express();
 var request = require('request');
@@ -30,8 +48,6 @@ app.post('/slack/post', function(req, res){
 	else {
 
 		// #################### SEARCH THE LETTERBOXD MOVIES LIST ######################
-		// TODO : ADD YEAR AS ADDITIONAL QUALIFIER - see edge case : 2001
-		// TODO : Escape frequest? See "Ferris Bueller's Day Off"
 
 		var searchurl = "https://letterboxd.com/search/films/" + frequest + "/";
 
@@ -57,7 +73,7 @@ app.post('/slack/post', function(req, res){
 				}
 
 				else {
-					// MORE THAN ONE RESULT FOUND. PRESENT BUTTONS FOR OPTIONS
+					// MORE THAN ONE RESULT FOUND. PRESENT BUTTONS FOR OPTIONS (see "Chocolat" for test case)
 					res.send( { response_type: "in_channel" } );
 					return chooseResult(frequest, res, films, responseURL);
 				}
@@ -76,9 +92,7 @@ app.post('/slack/choice', function(req, res){
 
 	// #################### HANDLE BUTTON CLICK RESPONSES ######################
 
-	//res.status(200).end(); // Avoid timeout with 200 status code
-
-	// TODO : UPDATE THE BUTTON LIST TO SHOW THAT ONE WAS SELECTED!!
+	//res.status(200).end(); // Avoid timeout with 200 status code. Causes double header send
 
     var actionJSONPayload = JSON.parse(req.body.payload);
 
@@ -89,8 +103,6 @@ app.post('/slack/choice', function(req, res){
 function chooseResult(frequest, res, films, responseURL) {
 
 	// #################### PRESENT BUTTON OPTIONS FOR MULTI-RESULT ######################
-	// TODO : Add "None of the above" option to the buttons
-	// TOOD : What happens with only 2 films? Probably an error
 
     res.status(200).end();
 
@@ -154,7 +166,6 @@ function sendButtonResponse(responseURL, JSONmessage) {
 function returnSingle(frequest, res, link) {
 
 	// #################### RETURN CARD FOR A DEFINITIVE MOVIE CHOICE ######################
-	// TODO : Add the TWG folks' scores
 
 	var movie_url = "https://letterboxd.com" + link;
 
@@ -204,8 +215,7 @@ function returnSingle(frequest, res, link) {
 			movie_details.ratingstring = ratings.map(function(elem){return elem.votes;}).join(",");
 			movie_details.averagerating = (tmpTotal / tmpCount).toFixed(1);
 			movie_details.maxvotes = tmpMax;
-			//console.log(movie_details.averagerating);
-
+			movie_details.ratingcolor = movie_details.averagerating < 2.5 ? '#ff0000' : movie_details.averagerating < 3.5 ? '#FF6600' : '#00FF00';
 
 			return_to_slack(movie_details, res);
 	    }
@@ -220,7 +230,6 @@ function returnSingle(frequest, res, link) {
 	        "replace_original": false,
 	        "attachments": [
 	          {
-	          	"color": "#ff0000",
 	          	"title": movie_details.title,
 	          	"title_link": movie_details.url,
 	          	"author_name": "Directed by : " + movie_details.director,
@@ -230,6 +239,7 @@ function returnSingle(frequest, res, link) {
 	            "thumb_url": movie_details.cover
 	          },
 	          {
+	          	"color": movie_details.ratingcolor,
 	          	"fields": [
                 {
                     "title": "Genre",
