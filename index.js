@@ -215,7 +215,7 @@ function returnSingle(frequest, res, link) {
 			movie_details.ratingstring = ratings.map(function(elem){return elem.votes;}).join(",");
 			movie_details.averagerating = (tmpTotal / tmpCount).toFixed(1);
 			movie_details.maxvotes = tmpMax;
-			movie_details.ratingcolor = movie_details.averagerating < 2.5 ? '#ff0000' : movie_details.averagerating < 3.5 ? '#FF6600' : '#00FF00';
+			movie_details.ratingcolor = movie_details.averagerating < 2.5 ? '#ff0000' : movie_details.averagerating < 3.5 ? '#FFFF00' : '#00FF00';
 
 			return_to_slack(movie_details, res);
 	    }
