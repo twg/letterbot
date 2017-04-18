@@ -120,12 +120,12 @@ function chooseResult(frequest, res, films, responseURL) {
 	            "callback_id": "i_dont_know_how_to_use_this",
 	            "color": "#3AA3E3",
 	            "attachment_type": "default",
-	            "actions": [
-	                JSON.stringify(tmpButtons)
-	            ]
+	            "actions": JSON.stringify(tmpButtons)
 	        }
 	    ]
 	}
+
+	console.log(message);
 
 	sendButtonResponse(responseURL, message);
 
