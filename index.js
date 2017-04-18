@@ -118,9 +118,9 @@ function chooseResult(frequest, res, films, responseURL) {
 
     		message.attachments[0].actions.push({
     					"name": "movie",
-	                    "text": films[0].title,
+	                    "text": films[i].title,
 	                    "type": "button",
-	                    'value': films[0].href
+	                    'value': films[i].href
 	                	});
     	}
     }
