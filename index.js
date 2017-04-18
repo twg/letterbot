@@ -6,6 +6,7 @@ TODO ::
  - Would 'Year' as additional qualifier in search help? How would this work with eg. 2001
  - Add empty values to Spread array, to avoid broken graphs (see : Exper Zenon (1991))
  - Add color to rating attachment based on quality/score
+ - Why does 'Superman IV' bring up the multiselect option with only a single search result?
  - Add "None" option to the buttons if search failed to find right film?
  - Remove buttons after selecting one (currently does double header-send when I try)
  - Create combined image for Cover + Screen
@@ -66,7 +67,7 @@ app.post('/slack/post', function(req, res){
 						);
 				}
 
-				else if (films[0].text.toLowerCase() == frequest.toLowerCase() && films[1].text.toLowerCase() != frequest.toLowerCase()) {
+				else if (films.length == 1 || (films[0].text.toLowerCase() == frequest.toLowerCase() && films[1].text.toLowerCase() != frequest.toLowerCase())) {
 					// PERFECT SINGLE MATCH FOUND (see "Frida" for test case)
 					return returnSingle(frequest, res, films[0].href);
 
