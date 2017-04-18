@@ -199,7 +199,7 @@ function returnSingle(frequest, res, link) {
 				ratings[i].rating = breakdown[2];
 				tmpTotal += (ratings[i].votes * ((i+1)/2));
 				tmpCount += ratings[i].votes;
-				tmpMax = (ratings[i].votes > tmpMax) ? ratings[i].votes : ;
+				tmpMax = (ratings[i].votes > tmpMax) ? ratings[i].votes : tmpMax;
 
 			}
 
