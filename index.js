@@ -94,6 +94,22 @@ function chooseResult(frequest, res, films, responseURL) {
 
     res.status(200).end();
 
+    var tmpButtons = '';
+
+    for (i=0;i<3;i++){
+
+    	if (films[i].title) {
+
+    		tmpButtons += 
+    					"{\n
+    						'name': 'movie',\n
+	                    'text': " + films[0].title + ",\n
+	                    'type': 'button',\n
+	                    'value': " + films[0].href + "\n
+	                },"
+    	}
+    }
+
 	var message = {
 	    "text": "Which movie were you thinking of?",
 	    "replace_original": false,
@@ -106,24 +122,7 @@ function chooseResult(frequest, res, films, responseURL) {
 	            "color": "#3AA3E3",
 	            "attachment_type": "default",
 	            "actions": [
-	                {
-	                    "name": "movie",
-	                    "text": films[0].title,
-	                    "type": "button",
-	                    "value": films[0].href
-	                },
-	                {
-	                    "name": "movie",
-	                    "text": films[1].title,
-	                    "type": "button",
-	                    "value": films[1].href
-	                },
-	                {
-	                    "name": "movie",
-	                    "text": films[2].title,
-	                    "type": "button",
-	                    "value": films[2].href
-	                }
+	                tmpButtons
 	            ]
 	        }
 	    ]
