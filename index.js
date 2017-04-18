@@ -80,12 +80,12 @@ app.post('/slack/choice', function(req, res){
 
 	// TODO : UPDATE THE BUTTON LIST TO SHOW THAT ONE WAS SELECTED!!
 
-	res.send( {
+	// res.send( {
 
-		"text": "Fetching your movie details",
-	    "replace_original": true,
-	    "response_type": "ephemeral",
-	});
+	// 	"text": "Fetching your movie details",
+	//     "replace_original": true,
+	//     "response_type": "ephemeral",
+	// });
 
     var actionJSONPayload = JSON.parse(req.body.payload);
 
