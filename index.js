@@ -3,6 +3,7 @@
 TODO ::
  - BUG : Why does the button selected not show the 'screen' image (see : The Last Starfighter, if direct or via 'Last Starfighter' search)
  - BUG : Bad string escaping (see : Ferris Bueller's Day Off) - assume apostrophe
+ - Add Emojis to responses (grumpy for no match, poop for bad movies...)
  - Would 'Year' as additional qualifier in search help? How would this work with eg. 2001
  - Add empty values to Spread array, to avoid broken graphs (see : Exper Zenon (1991))
  - Add color to rating attachment based on quality/score
@@ -50,7 +51,8 @@ app.post('/slack/post', function(req, res){
 
 		// #################### SEARCH THE LETTERBOXD MOVIES LIST ######################
 
-		var searchurl = "https://letterboxd.com/search/films/" + frequest + "/";
+		var searchurl = "https://letterboxd.com/search/films/" + encodeURIComponent(frequest).replace(/[!'()*]/g, escape) + "/";
+		console.log(searchurl);
 
 		suq(searchurl, function (err, json, body) {
 	    	if (!err) {
