@@ -80,13 +80,6 @@ app.post('/slack/choice', function(req, res){
 
 	// TODO : UPDATE THE BUTTON LIST TO SHOW THAT ONE WAS SELECTED!!
 
-	// res.send( {
-
-	// 	"text": "Fetching your movie details",
-	//     "replace_original": true,
-	//     "response_type": "ephemeral",
-	// });
-
     var actionJSONPayload = JSON.parse(req.body.payload);
 
     returnSingle('monkeytennis', res, actionJSONPayload.actions[0].value); // .value here is the URL to the chosen movie
