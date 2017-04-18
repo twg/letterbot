@@ -181,16 +181,14 @@ function returnSingle(frequest, res, link) {
 		    	return (el.text.includes("★"));
 			});
 
-			// TODO : Turn the following into a nice request for dynamic graph image to display in card
-			// var re = new RegExp(/^([\d,]+)\s([^\s]+)/);
-			// for (i=0;i<ratings.length;i++) {
-			// 	var breakdown = re.exec(ratings[i].text);
-			// 	ratings[i].stars = breakdown[1];
-			// 	ratings[i].rating = breakdown[2];
-			// }
-			// for (i=0;i<ratings.length;i++) {
-			// console.log(ratings[i].rating + " : " + ratings[i].stars + "\n");
-			// }
+			var re = new RegExp(/^([\d,]+)\s([^\s]+)/);
+			for (i=0;i<ratings.length;i++) {
+				var breakdown = re.exec(ratings[i].text);
+				ratings[i].votes = breakdown[1];
+				ratings[i].rating = breakdown[2];
+			}
+
+			movie_details.ratingstring = ratings.map(function(elem){return elem.votes;}).join(",");
 
 			return_to_slack(movie_details, res);
 	    }
@@ -227,7 +225,7 @@ function returnSingle(frequest, res, link) {
                     "short": true
                 }
             	],
-				"thumb_url": "https://chart.googleapis.com/chart?chma=0,0,20,20&chf=bg,s,FFFFFF00&cht=bvs&chs=150x150&chd=t:15,24,19,101,170,545,741,1127,415,410&chco=4D89F9&chds=0,1200&chbh=15,0,0"
+				"thumb_url": "https://chart.googleapis.com/chart?chma=0,0,25,25&chf=bg,s,FFFFFF00&cht=bvs&chs=150x150&chd=t:" + movie_details.ratingstring + "&chco=4D89F9&chds=0,1200&chbh=15,0,0"
 	          },
 	          {
 	          	"image_url": movie_details.screen
