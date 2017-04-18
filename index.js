@@ -5,6 +5,7 @@ TODO ::
  - BUG : Bad string escaping (see : Ferris Bueller's Day Off) - assume apostrophe
  - Add Emojis to responses (grumpy for no match, poop for bad movies...)
  - Would 'Year' as additional qualifier in search help? How would this work with eg. 2001
+ - Improve empty mathch from just case to simplifying special chars, additional spaces etc.
  - Add empty values to Spread array, to avoid broken graphs (see : Exper Zenon (1991))
  - Add color to rating attachment based on quality/score
  - Why does 'Superman IV' bring up the multiselect option with only a single search result?
