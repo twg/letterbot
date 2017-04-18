@@ -170,6 +170,7 @@ function returnSingle(frequest, res, link) {
 	        movie_details.title = json.opengraph['og:title'];
 	        movie_details.desc = json.meta['twitter:description'];
 	        movie_details.screen = json.opengraph['og:image'];
+	        movie_details.director = json.meta['twitter:data1'];
 
 	        var movieschema = json.microdata.filter(function (el) {
 		    	return (el.type.includes("http://schema.org/Movie"));
@@ -180,6 +181,12 @@ function returnSingle(frequest, res, link) {
 	        var ratings = json.tags.links.filter(function (el) {
 		    	return (el.text.includes("★"));
 			});
+
+			var genres = json.tags.links.filter(function (el) {
+		    	return (el.href.includes("/films/genre/"));
+			});
+
+			movie_details.genrestring = genres.map(function(elem){return elem.text.charAt(0).toUpperCase() + elem.text.slice(1);}).join(", ");
 
 			var tmpCount = 0;
 			var tmpTotal = 0;
@@ -216,7 +223,7 @@ function returnSingle(frequest, res, link) {
 	          	"color": "#ff0000",
 	          	"title": movie_details.title,
 	          	"title_link": movie_details.url,
-	          	"author_name": "TODO : DIRECTOR",
+	          	"author_name": "Directed by : " + movie_details.director,
             	"author_link": movie_details.url,
             	"author_icon": movie_details.cover,
 	            "text": movie_details.desc,
@@ -226,7 +233,7 @@ function returnSingle(frequest, res, link) {
 	          	"fields": [
                 {
                     "title": "Genre",
-                    "value": "TODO",
+                    "value": movie_details.genrestring,
                     "short": true
                 },
 				{
