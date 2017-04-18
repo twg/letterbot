@@ -215,8 +215,22 @@ function returnSingle(frequest, res, link) {
 	            "thumb_url": "https://chart.googleapis.com/chart?cht=bvs&chs=152x70&chd=t:15,24,19,101,170,545,741,1127,415,410&chco=4D89F9&chds=0,1200&chxt=x&chxl=0:||1||2||3||4||5&chbh=15,0,0"
 	          },
 	          {
-	          	"image_url": movie_details.cover,
-				"thumb_url": movie_details.cover
+	          	"fields": [
+                {
+                    "title": "Genre",
+                    "value": "Horror",
+                    "short": true
+                },
+				{
+                    "title": "Rating",
+                    "value": "3.7/5",
+                    "short": true
+                }
+            	],
+				"thumb_url": "https://chart.googleapis.com/chart?cht=bvs&chs=152x70&chd=t:15,24,19,101,170,545,741,1127,415,410&chco=4D89F9&chds=0,1200&chxt=x&chxl=0:||1||2||3||4||5&chbh=15,0,0"
+	          },
+	          {
+	          	"image_url": movie_details.screen
 	          }
 	        ]
 	    };
