@@ -187,15 +187,17 @@ function returnSingle(frequest, res, link) {
 			var re = new RegExp(/^([\d,]+)\s([^\s]+)/);
 			for (i=0;i<ratings.length;i++) {
 				var breakdown = re.exec(ratings[i].text);
-				ratings[i].votes = breakdown[1].replace(/,/g, '');
+				ratings[i].votes = Number(breakdown[1].replace(/,/g, ''));
 				ratings[i].rating = breakdown[2];
-				tmpTotal += (ratings[i].votes * (i/2));
+				tmpTotal += (ratings[i].votes * ((i+1)/2));
 				tmpCount += ratings[i].votes;
 
 			}
 
 			movie_details.ratingstring = ratings.map(function(elem){return elem.votes;}).join(",");
-			movie_details.averagerating = tmpTotal / tmpCount;
+			movie_details.averagerating = (tmpTotal / tmpCount).toFixed(1);
+
+			//console.log(movie_details.averagerating);
 
 
 			return_to_slack(movie_details, res);
