@@ -78,6 +78,8 @@ app.post('/slack/choice', function(req, res){
 
 	//res.status(200).end(); // Avoid timeout with 200 status code
 
+	// TODO : UPDATE THE BUTTON LIST TO SHOW THAT ONE WAS SELECTED!!
+
     var actionJSONPayload = JSON.parse(req.body.payload);
 
     returnSingle('monkeytennis', res, actionJSONPayload.actions[0].value); // .value here is the URL to the chosen movie
@@ -203,10 +205,13 @@ function returnSingle(frequest, res, link) {
 	        "replace_original": false,
 	        "attachments": [
 	          {
-	            "text": "Movie: " + movie_details.title +  "\n"
-	                  + "Link: " + movie_details.url + "\n"
-	                  + "Description: " + movie_details.desc + "\n"
-	                  + "Rating : TODO",
+	          	"color": "#ff0000",
+	          	"title": movie_details.title,
+	          	"title_link": movie_details.url,
+	          	"author_name": "The Director Here",
+            	"author_link": movie_details.url,
+            	"author_icon": movie_details.cover,
+	            "text": movie_details.desc,
 	            "thumb_url": movie_details.cover,
 	            "image_url": "https://chart.googleapis.com/chart?cht=bvs&chs=152x70&chd=t:15,24,19,101,170,545,741,1127,415,410&chco=4D89F9&chds=0,1200&chxt=x&chxl=0:||1||2||3||4||5&chbh=15,0,0"
 	          }
