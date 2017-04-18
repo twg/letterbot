@@ -32,3 +32,7 @@ BUTTON CLICK RESPONSE PAYLOAD
 2017-04-15T02:34:56.357352+00:00 app[web.1]:   token: 'pmk9rJBoXu6HUyHNvfPvXU3L',
 2017-04-15T02:34:56.357352+00:00 app[web.1]:   is_app_unfurl: false,
 2017-04-15T02:34:56.357353+00:00 app[web.1]:   response_url: 'https://hooks.slack.com/actions/T4GG0CZMW/168963324224/cbHE8CcKlWwzOyYedtBh89SI' }
+
+15,24,19,101,170,545,741,1127,415,410
+
+https://chart.googleapis.com/chart?cht=bvs&chs=300x100&chd=t:15,24,19,101,170,545,741,1127,415,410&chco=4D89F9&chds=0,1200&chxt=x&chxl=0:||*||**||***||****||*****&chbh=10,0,0
