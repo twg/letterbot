@@ -94,19 +94,18 @@ function chooseResult(frequest, res, films, responseURL) {
 
     res.status(200).end();
 
-    var tmpButtons = '';
+    var tmpButtons = "";
 
     for (i=0;i<3;i++){
 
     	if (films[i].title) {
 
-    		tmpButtons += 
-    					"{\n
-    						'name': 'movie',\n
-	                    'text': " + films[0].title + ",\n
-	                    'type': 'button',\n
-	                    'value': " + films[0].href + "\n
-	                },"
+    		tmpButtons += "{\
+    					'name': 'movie',\
+	                    'text': " + films[0].title + ",\
+	                    'type': 'button',\
+	                    'value': " + films[0].href + "\
+	                	},"
     	}
     }
 
