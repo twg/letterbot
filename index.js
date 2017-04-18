@@ -51,8 +51,8 @@ app.post('/slack/post', function(req, res){
 
 		// #################### SEARCH THE LETTERBOXD MOVIES LIST ######################
 
-		var searchurl = "https://letterboxd.com/search/films/" + encodeURIComponent(frequest).replace(/[!'()*]/g, escape) + "/";
-		console.log(searchurl);
+		var searchurl = "https://letterboxd.com/search/films/" + encodeURIComponent(frequest) + "/";
+		//console.log(searchurl);
 
 		suq(searchurl, function (err, json, body) {
 	    	if (!err) {
@@ -140,7 +140,7 @@ function chooseResult(frequest, res, films, responseURL) {
     	}
     }
 
-	console.log(message);
+	//console.log(message);
 
 	sendButtonResponse(responseURL, message);
 
