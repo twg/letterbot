@@ -184,7 +184,7 @@ function returnSingle(frequest, res, link) {
 			var re = new RegExp(/^([\d,]+)\s([^\s]+)/);
 			for (i=0;i<ratings.length;i++) {
 				var breakdown = re.exec(ratings[i].text);
-				ratings[i].votes = breakdown[1];
+				ratings[i].votes = breakdown[1].replace(/,/g, '');
 				ratings[i].rating = breakdown[2];
 			}
 
