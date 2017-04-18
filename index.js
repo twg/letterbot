@@ -212,7 +212,7 @@ function returnSingle(frequest, res, link) {
             	"author_link": movie_details.url,
             	"author_icon": movie_details.cover,
 	            "text": movie_details.desc,
-	            "thumb_url": "https://chart.googleapis.com/chart?cht=bvs&chs=152x70&chd=t:15,24,19,101,170,545,741,1127,415,410&chco=4D89F9&chds=0,1200&chxt=x&chxl=0:||1||2||3||4||5&chbh=15,0,0"
+	            "thumb_url": movie_details.cover
 	          },
 	          {
 	          	"fields": [
@@ -227,7 +227,7 @@ function returnSingle(frequest, res, link) {
                     "short": true
                 }
             	],
-				"thumb_url": "https://chart.googleapis.com/chart?cht=bvs&chs=152x70&chd=t:15,24,19,101,170,545,741,1127,415,410&chco=4D89F9&chds=0,1200&chxt=x&chxl=0:||1||2||3||4||5&chbh=15,0,0"
+				"thumb_url": "https://chart.googleapis.com/chart?cht=bvs&chs=150x150&chd=t:15,24,19,101,170,545,741,1127,415,410&chco=4D89F9&chds=0,1200&chxt=x&chxl=0:||1||2||3||4||5&chbh=15,0,0"
 	          },
 	          {
 	          	"image_url": movie_details.screen
