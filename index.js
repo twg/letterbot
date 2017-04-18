@@ -94,18 +94,18 @@ function chooseResult(frequest, res, films, responseURL) {
 
     res.status(200).end();
 
-    var tmpButtons = "";
+    var tmpButtons = [];
 
     for (i=0;i<3;i++){
 
-    	if (films[i].title) {
+    	if (films[i]) {
 
-    		tmpButtons += "{\
-    					'name': 'movie',\
-	                    'text': " + films[0].title + ",\
-	                    'type': 'button',\
-	                    'value': " + films[0].href + "\
-	                	},"
+    		tmpButtons.push({
+    					"name": "movie",
+	                    "text": films[0].title,
+	                    "type": "button",
+	                    'value': films[0].href
+	                	});
     	}
     }
 
@@ -121,7 +121,7 @@ function chooseResult(frequest, res, films, responseURL) {
 	            "color": "#3AA3E3",
 	            "attachment_type": "default",
 	            "actions": [
-	                tmpButtons
+	                JSON.stringify(tmpButtons)
 	            ]
 	        }
 	    ]
